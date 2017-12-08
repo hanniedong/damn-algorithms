@@ -21,6 +21,6 @@ const album_track_durations = {
  * @return {string}
  */
 
-function find_longest_track() {
+const find_longest_track = () => {
 
 };
