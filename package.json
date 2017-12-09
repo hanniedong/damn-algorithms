@@ -1,7 +1,8 @@
 {
   "name": "good-algorithms-maad-data-structures",
   "version": "1.0.0",
-  "description": "algorithms and data structures workshop inspired by Kendrick Lamar's album \"good kid, m.A.A.d city\"",
+  "description": "Intro to computer science workshop in JavaScript inspired by Kendrick Lamar's album 'good kid, m.A.A.d city'"
+,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
