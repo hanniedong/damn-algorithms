@@ -10,6 +10,6 @@ let album_tracks = ['BLOOD', 'DNA', 'YAH', 'ELEMENT', 'FEEL', 'LOYALTY', 'PRIDE'
  * @return {array}
  */
 
-const reverse_in_place = tracks => {
+const reverse_track_order_in_place = tracks => {
 
 }
