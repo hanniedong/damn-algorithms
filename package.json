@@ -8,8 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "data",
-    "structures",
+    "data structures",
     "algorithms",
     "JavaScript",
     "ES6"
