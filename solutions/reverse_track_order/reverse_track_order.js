@@ -11,7 +11,7 @@ let album_tracks = ['BLOOD', 'DNA', 'YAH', 'ELEMENT', 'FEEL', 'LOYALTY', 'PRIDE'
  */
 
 const reverse_track_order_in_place = tracks => {
-  let left = 0
+  let left = 0;
   let right = tracks.length - 1;
 
   while (left < right) {
