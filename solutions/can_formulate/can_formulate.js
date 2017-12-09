@@ -32,7 +32,7 @@ const can_formulate = (target, lyrics) => {
 
   for (char of target_lowercase) {
     possible_chars[char] = (possible_chars[char] || 0) - 1;
-    if (possible_chars[char] < 0) {
+    if (possible_chars[char] === -1) {
       return false;
     }
   }
