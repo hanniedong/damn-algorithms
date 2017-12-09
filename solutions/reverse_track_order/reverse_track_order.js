@@ -7,6 +7,7 @@ Given an array of track names as strings, reverse the elements in the array in-p
 let album_tracks = ['BLOOD', 'DNA', 'YAH', 'ELEMENT', 'FEEL', 'LOYALTY', 'PRIDE', 'HUMBLE', 'LUST', 'LOVE', 'XXX', 'FEAR', 'GOD', 'DUCKWORTH'];
 
 /**
+ * @param {array} tracks
  * @return {array}
  */
 
