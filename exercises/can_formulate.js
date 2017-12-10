@@ -6,6 +6,7 @@ Each letter in the lyrics string can only be used once in your target string.
 Note: Ignore case-sensitivity.
 */
 
+// Example:
 let target_string = 'Hack Reactor';
 let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
 
@@ -19,5 +20,4 @@ const can_formulate = (target, lyrics) => {
 
 }
 
-// module.exports = can_formulate;
 export default can_formulate;
