@@ -16,6 +16,10 @@ test('"telegraph" can be formulated from "T E L E G R A P H"', () => {
   expect(can_formulate('telegraph', 'T E L E G R A P H')).toBeTruthy();
 });
 
+test('"OCCUPIES" can be formulated from "Poetic Justice"', () => {
+  expect(can_formulate('OCCUPIES', 'Poetic Justice')).toBeTruthy();
+});
+
 test('"Kendrick Lamar" cannot be formulated from "KendrickLamar"', () => {
   expect(can_formulate('Kendrick Lamar', 'KendrickLamar')).toBeFalsy();
 });
