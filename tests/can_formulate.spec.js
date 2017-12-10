@@ -1,4 +1,4 @@
-import can_formulate from '../exercises/can_formulate.js';
+import can_formulate from '../exercises/can_formulate';
 
 test('can_formulate is a function', () => {
   expect(typeof can_formulate).toEqual('function');
