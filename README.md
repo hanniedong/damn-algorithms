@@ -13,3 +13,7 @@ install dev dependencies:
 install jest globally:
 
 `yarn add -g jest`
+
+## run tests
+
+`jest tests/{name_of_exercise}.spec.js --watch`
