@@ -16,4 +16,10 @@ install jest globally:
 
 ## run tests
 
+individually:
+
 `jest __tests__/{name_of_exercise}.spec.js --watch`
+
+collectively:
+
+`yarn test --watchAll`
