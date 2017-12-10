@@ -18,3 +18,6 @@ let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconn
 const can_formulate = (target, lyrics) => {
 
 }
+
+// module.exports = can_formulate;
+export default can_formulate;
