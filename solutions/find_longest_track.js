@@ -41,3 +41,5 @@ const convert_time_to_seconds = string => {
     return (parseInt(min) * 60) + parseInt(sec);
   });
 };
+
+export default find_longest_track;

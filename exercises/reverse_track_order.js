@@ -14,3 +14,5 @@ let album_tracks = ['BLOOD', 'DNA', 'YAH', 'ELEMENT', 'FEEL', 'LOYALTY', 'PRIDE'
 const reverse_track_order_in_place = tracks => {
 
 }
+
+export default reverse_track_order_in_place;

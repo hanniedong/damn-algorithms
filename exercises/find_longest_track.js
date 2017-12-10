@@ -24,3 +24,5 @@ const album_track_durations = {
 const find_longest_track = () => {
 
 };
+
+export default find_longest_track;
