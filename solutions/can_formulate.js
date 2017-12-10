@@ -16,30 +16,27 @@ let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconn
  */
 
 const can_formulate = (target, lyrics) => {
-
   if (target.length > lyrics.length) {
-    return false;
+   return false;
   }
 
-  let target_lowercase = string_to_lowercase(target);
-  let lyrics_lowercase = string_to_lowercase(lyrics);
+  let target_lowercase = target.toLowerCase();
+  let lyrics_lowercase = lyrics.toLowerCase();
 
   let possible_chars = {};
 
-  for (char of lyrics_lowercase) {
-    possible_chars[char] = (possible_chars[char] || 0) + 1;
+  for (let char of lyrics_lowercase) {
+   possible_chars[char] = (possible_chars[char] || 0) + 1;
   }
 
-  for (char of target_lowercase) {
-    possible_chars[char] = (possible_chars[char] || 0) - 1;
-    if (possible_chars[char] === -1) {
-      return false;
-    }
+  for (let char of target_lowercase) {
+   possible_chars[char] = (possible_chars[char] || 0) - 1;
+   if (possible_chars[char] === -1) {
+     return false;
+   }
   }
 
   return true;
 }
 
-const string_to_lowercase = string => {
-  return string.toLowerCase();
-}
+export default can_formulate;
