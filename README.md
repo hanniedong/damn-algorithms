@@ -2,6 +2,10 @@
 An algorithms and data structures workshop in JavaScript ES6 inspired by Kendrick Lamar's album 'good kid, m.A.A.d city'
 
 ## configuration
+install yarn globally
+
+`brew install yarn` or `npm i -g yarn`
+
 install dev dependencies:
 
 `yarn`
