@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest --coverage"
   },
+  "jest": {
+    "testEnvironment": "jest-environment-node"
+  },
   "keywords": [
     "data structures",
     "algorithms",
