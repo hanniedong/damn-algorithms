@@ -5,6 +5,11 @@ test('can_formulate is a function', () => {
   expect(result).toEqual('function');
 });
 
+test('can_formulate returns a boolean', () => {
+  const result = can_formulate('a', 'ab');
+  expect(typeof result).toEqual('boolean');
+})
+
 test('"aloha" can be formulated for "MAHALO"', () => {
   const result = can_formulate('aloha', 'mahalo');
   expect(result).toBeTruthy();
