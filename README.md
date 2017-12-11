@@ -22,4 +22,4 @@ individually:
 
 collectively:
 
-`yarn test --watchAll`
+`yarn test`
