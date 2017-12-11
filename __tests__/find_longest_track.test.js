@@ -13,7 +13,7 @@ test('find_longest_track returns a string', () => {
   expect(typeof result).toEqual('string');
 })
 
-test('good_kid_maad_city should return "Sing About Me, I\'m Dying of Thirst"', () => {
+test('good_kid_maad_city returns "Sing About Me, I\'m Dying of Thirst"', () => {
   const good_kid_maad_city = {
     "Sherane a.k.a. Master Splinter's Daughter": "4:34",
     "*****, Don't Kill My Vibe": "5:11",
@@ -32,7 +32,7 @@ test('good_kid_maad_city should return "Sing About Me, I\'m Dying of Thirst"', (
   expect(result).toEqual('Sing About Me, I\'m Dying of Thirst');
 });
 
-test('untitled_unmastered should return "untitled 07"', () => {
+test('untitled_unmastered returns "untitled 07"', () => {
   const untitled_unmastered = {
     "untitled 01": "4:08",
     "untitled 02": "4:19",
@@ -47,7 +47,7 @@ test('untitled_unmastered should return "untitled 07"', () => {
   expect(result).toEqual('untitled 07');
 });
 
-test('damn should return "FEAR"', () => {
+test('damn returns "FEAR"', () => {
   const damn = {
     "BLOOD": "1:58",
     "DNA": "3:06",
