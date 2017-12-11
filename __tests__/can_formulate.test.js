@@ -1,4 +1,4 @@
-import can_formulate from '../solutions/can_formulate';
+import can_formulate from '../exercises/can_formulate';
 
 test('can_formulate is a function', () => {
   const result = typeof can_formulate;
