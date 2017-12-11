@@ -4,9 +4,9 @@ test('Stack is a function', () => {
   expect(typeof Stack).toEqual('function');
 });
 
-test('an instance of Stack is an object', () => {
+test('stack is an instance of Stack', () => {
   const stack = new Stack();
-  expect(typeof stack).toEqual('object');
+  expect(stack).toBeInstanceOf(Stack);
 });
 
 test('Stack has a size property that is a number', () => {
@@ -27,13 +27,13 @@ test('Stack has a push method', () => {
 test('Stack push method adds item to the top of the stack', () => {
   const stack = new Stack();
   stack.push('good');
-  expect(stack.storage).toEqual({"0": "good"});
+  expect(stack.storage).toMatchObject({"0": "good"});
   stack.push('kid');
-  expect(stack.storage).toEqual({"0": "good", "1": "kid"});
+  expect(stack.storage).toMatchObject({"0": "good", "1": "kid"});
   stack.push('maad');
-  expect(stack.storage).toEqual({"0": "good", "1": "kid", "2": "maad"});
+  expect(stack.storage).toMatchObject({"0": "good", "1": "kid", "2": "maad"});
   stack.push('city');
-  expect(stack.storage).toEqual({"0": "good", "1": "kid", "2": "maad", "3": "city"});
+  expect(stack.storage).toMatchObject({"0": "good", "1": "kid", "2": "maad", "3": "city"});
 });
 
 test('Stack has a pop method', () => {
@@ -48,14 +48,14 @@ test('Stack pop method removes item at the top of stack', () => {
   stack.push('maad');
   stack.push('city');
   stack.pop();
-  expect(stack.storage).toEqual({"0": "good", "1": "kid", "2": "maad"});
+  expect(stack.storage).toMatchObject({"0": "good", "1": "kid", "2": "maad"});
   stack.pop();
-  expect(stack.storage).toEqual({"0": "good", "1": "kid"});
+  expect(stack.storage).toMatchObject({"0": "good", "1": "kid"});
   stack.pop();
-  expect(stack.storage).toEqual({"0": "good"});
+  expect(stack.storage).toMatchObject({"0": "good"});
   stack.pop();
-  expect(stack.storage).toEqual({});
-})
+  expect(stack.storage).toMatchObject({});
+});
 
 test('Stack has a peek method', () => {
   const stack = new Stack();
@@ -76,7 +76,7 @@ test('Stack peek method returns value at top of the stack, but doesn\'t alter st
   expect(stack.pop()).toEqual('kid');
   expect(stack.peek()).toEqual('good');
   expect(stack.pop()).toEqual('good');
-})
+});
 
 test('Stack has a getSize method', () => {
   const stack = new Stack();
@@ -94,19 +94,19 @@ test('Stack getSize method retuns number of values in storage', () => {
   expect(stack.getSize()).toEqual(1);
   stack.pop();
   expect(stack.getSize()).toEqual(0);
-})
+});
 
 test('Stack has a reset method', () => {
   let stack = new Stack();
   expect(typeof stack.reset).toEqual('function');
 });
 
-test('Stack reset method empties values from storage', () => {
+test('Stack reset method empties the storage object', () => {
   const stack = new Stack();
   stack.push('good');
   stack.push('kid');
   stack.push('maad');
   stack.push('city');
   stack.reset();
-  expect(stack.storage).toEqual({});
-})
+  expect(stack.storage).toMatchObject({});
+});
