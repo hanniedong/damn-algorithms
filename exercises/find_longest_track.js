@@ -1,8 +1,9 @@
 /*
 Given an object of track names and durations, write a function that returns the track name with the longest duration.
- */
 
-const album_track_durations = {
+Example:
+
+const good_kid_maad_city = {
   "Sherane a.k.a. Master Splinter's Daughter": "4:34",
   "*****, Don't Kill My Vibe": "5:11",
   "Backseat Freestyle": "3:33",
@@ -16,12 +17,14 @@ const album_track_durations = {
   "Real": "7:23",
   "Compton": "4:08"
 };
+*/
 
 /**
+ * @param {object} album
  * @return {string}
  */
 
-const find_longest_track = () => {
+const find_longest_track = (album) => {
 
 };
 
