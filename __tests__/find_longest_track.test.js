@@ -4,6 +4,15 @@ test('find_longest_track is a function', () => {
   expect(typeof find_longest_track).toEqual('function');
 });
 
+test('find_longest_track returns a string', () => {
+  const album = {
+    "track 1": "1:23",
+    "track 2": "2:34"
+  }
+  let result = find_longest_track(album);
+  expect(typeof result).toEqual('string');
+})
+
 test('good_kid_maad_city should return "Sing About Me, I\'m Dying of Thirst"', () => {
   const good_kid_maad_city = {
     "Sherane a.k.a. Master Splinter's Daughter": "4:34",
