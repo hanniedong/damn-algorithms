@@ -4,7 +4,7 @@
   "description": "An algorithms and data structures workshop in JavaScript ES6 inspired by Kendrick Lamar's album 'good kid, m.A.A.d city'",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [
     "data structures",
