@@ -16,9 +16,6 @@ let now_or_never_verse = 'Waking up in a dream Sleepwalking on another big stage
 can_formulate(target, now_or_never_verse); => return true
 */
 
-// Example:
-let target_string = 'Hack Reactor';
-let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
 
 /**
  * @param {string} target
