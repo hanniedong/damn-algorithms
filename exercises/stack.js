@@ -13,10 +13,13 @@ Examples:
 stack.push('good');
 stack.push('kid');
 stack.storage = { 0: 'good', 1: 'kid'}
-stack.peek() => return 'kid'
-stack.pop() => return 'kid'
-stack.storage = { 0: 'good'}
-stack.getSize => return 1
+stack.push('maad');
+stack.push('city');
+stack.storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
+stack.peek() => return 'city'
+stack.pop() => return 'cit'
+stack.storage = { 0: 'good', 1: 'kid', 2: 'maad'}
+stack.getSize => return 3
 stack.reset()
 stack.storage = {}
  */
