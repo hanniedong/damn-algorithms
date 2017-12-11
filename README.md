@@ -18,7 +18,7 @@ install jest globally:
 
 individually:
 
-`jest __tests__/{name_of_exercise}.spec.js --watch`
+`jest __tests__/{name_of_exercise}.test.js --watch`
 
 collectively:
 
