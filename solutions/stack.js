@@ -16,10 +16,10 @@ stack.storage = { 0: 'good', 1: 'kid'}
 stack.push('maad');
 stack.push('city');
 stack.storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
-stack.peek() => return 'kid'
-stack.pop() => return 'kid'
-stack.storage = { 0: 'good'}
-stack.getSize => return 1
+stack.peek() => return 'city'
+stack.pop() => return 'city'
+stack.storage = { 0: 'good', 1: 'kid', 2: 'maad'}
+stack.getSize => return 3
 stack.reset()
 stack.storage = {}
  */

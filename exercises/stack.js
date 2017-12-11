@@ -17,7 +17,7 @@ stack.push('maad');
 stack.push('city');
 stack.storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
 stack.peek() => return 'city'
-stack.pop() => return 'cit'
+stack.pop() => return 'city'
 stack.storage = { 0: 'good', 1: 'kid', 2: 'maad'}
 stack.getSize => return 3
 stack.reset()
