@@ -1,29 +1,36 @@
-import can_formulate from '../exercises/can_formulate';
+import can_formulate from '../solutions/can_formulate';
 
 test('can_formulate is a function', () => {
-  expect(typeof can_formulate).toEqual('function');
+  const result = typeof can_formulate;
+  expect(result).toEqual('function');
 });
 
 test('"aloha" can be formulated for "MAHALO"', () => {
-  expect(can_formulate('aloha', 'mahalo')).toBeTruthy();
+  const result = can_formulate('aloha', 'mahalo');
+  expect(result).toBeTruthy();
 });
 
 test('"OaKlAnD" can be formulated from "oAkLaNd"', () => {
-  expect(can_formulate('OaKlAnD', 'oAkLaNd')).toBeTruthy();
+  const result = can_formulate('OaKlAnD', 'oAkLaNd');
+  expect(result).toBeTruthy();
 });
 
 test('"telegraph" can be formulated from "T E L E G R A P H"', () => {
-  expect(can_formulate('telegraph', 'T E L E G R A P H')).toBeTruthy();
+  const result = can_formulate('telegraph', 'T E L E G R A P H');
+  expect(result).toBeTruthy();
 });
 
 test('"OCCUPIES" can be formulated from "Poetic Justice"', () => {
-  expect(can_formulate('OCCUPIES', 'Poetic Justice')).toBeTruthy();
+  const result = can_formulate('OCCUPIES', 'Poetic Justice');
+  expect(result).toBeTruthy();
 });
 
 test('"Kendrick Lamar" cannot be formulated from "KendrickLamar"', () => {
-  expect(can_formulate('Kendrick Lamar', 'KendrickLamar')).toBeFalsy();
+  const result = can_formulate('Kendrick Lamar', 'KendrickLamar');
+  expect(result).toBeFalsy();
 });
 
 test('"ALGORITHMS" cannot be formulated from "algorithm"', () => {
-  expect(can_formulate('ALGORITHMS', 'algorithm')).toBeFalsy();
+  const result = can_formulate('ALGORITHMS', 'algorithm');
+  expect(result).toBeFalsy();
 });
