@@ -12,46 +12,46 @@ Examples:
 
 stack.push('good');
 stack.push('kid');
-stack.storage = { 0: 'good', 1: 'kid'}
+stack._storage = { 0: 'good', 1: 'kid'}
 stack.push('maad');
 stack.push('city');
-stack.storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
+stack._storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
 stack.peek() => return 'city'
 stack.pop() => return 'city'
-stack.storage = { 0: 'good', 1: 'kid', 2: 'maad'}
+stack._storage = { 0: 'good', 1: 'kid', 2: 'maad'}
 stack.getSize => return 3
 stack.reset()
-stack.storage = {}
+stack._storage = {}
  */
 
 class Stack {
   constructor() {
-    this.size = 0;
-    this.storage = {};
+    this._storage = {};
+    this._size = 0;
   }
 
   push(value) {
-    this.storage[this.size] = value;
-    this.size++;
+    this._storage[this._size] = value;
+    this._size++;
   }
 
   pop() {
-    let result = this.storage[--this.size];
-    delete this.storage[this.size];
+    let result = this._storage[--this._size];
+    delete this._storage[this._size];
     return result;
   }
 
   peek() {
-    return this.storage[this.size - 1];
+    return this._storage[this._size - 1];
   }
 
   get_size() {
-    return this.size;
+    return this._size;
   }
 
   reset() {
-    this.size = 0;
-    this.storage = {};
+    this._size = 0;
+    this._storage = {};
   }
 }
 

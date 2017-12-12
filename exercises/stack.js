@@ -24,9 +24,6 @@ stack.reset()
 stack.storage = {}
  */
 
-class Stack {
-  constructor() {
-  }
-}
+class Stack {}
 
 export default Stack;
