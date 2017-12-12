@@ -97,7 +97,7 @@ test('Stack get_size method retuns number of values in storage', () => {
 });
 
 test('Stack has a reset method', () => {
-  let stack = new Stack();
+  const stack = new Stack();
   expect(typeof stack.reset).toEqual('function');
 });
 

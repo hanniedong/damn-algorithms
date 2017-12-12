@@ -1,12 +1,12 @@
 /*
-Create a Stack class WITHOUT implementing any JavaScript array methods (Array.push, Array.pop, etc).
+Create a Stack class WITHOUT using an array and WITHOUT implementing any JavaScript array methods (Array.push, Array.pop, etc).
 
-The stack should have the following methods:
-push - adds an item to the top of the Stack
-pop - removes the top item from the Stack
-peek - tells us what value was last added to the Stack
-getSize - tells us how many values are currently in the stack
-reset - removes all elements from the stack
+The Stack class should have the following methods:
+push - adds a value to the top of the stack
+pop - removes the top value from the stack
+peek - tells us what value was last added to the stack
+get_size - tells us how many values are currently in the stack
+reset - removes all values from the stack
 
 Examples:
 
@@ -19,7 +19,7 @@ stack._storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city'}
 stack.peek() => return 'city'
 stack.pop() => return 'city'
 stack._storage = { 0: 'good', 1: 'kid', 2: 'maad'}
-stack.getSize => return 3
+stack.get_size => return 3
 stack.reset()
 stack._storage = {}
  */
