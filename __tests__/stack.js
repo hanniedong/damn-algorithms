@@ -78,22 +78,22 @@ test('Stack peek method returns value at top of the stack, but doesn\'t alter st
   expect(stack.pop()).toEqual('good');
 });
 
-test('Stack has a getSize method', () => {
+test('Stack has a get_size method', () => {
   const stack = new Stack();
-  expect(typeof stack.getSize).toEqual('function');
+  expect(typeof stack.get_size).toEqual('function');
 });
 
-test('Stack getSize method retuns number of values in storage', () => {
+test('Stack get_size method retuns number of values in storage', () => {
   const stack = new Stack();
-  expect(stack.getSize()).toEqual(0);
+  expect(stack.get_size()).toEqual(0);
   stack.push('good');
-  expect(stack.getSize()).toEqual(1);
+  expect(stack.get_size()).toEqual(1);
   stack.push('kid');
-  expect(stack.getSize()).toEqual(2);
+  expect(stack.get_size()).toEqual(2);
   stack.pop();
-  expect(stack.getSize()).toEqual(1);
+  expect(stack.get_size()).toEqual(1);
   stack.pop();
-  expect(stack.getSize()).toEqual(0);
+  expect(stack.get_size()).toEqual(0);
 });
 
 test('Stack has a reset method', () => {

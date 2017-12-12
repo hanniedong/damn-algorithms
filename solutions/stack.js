@@ -36,12 +36,7 @@ class Stack {
   }
 
   pop() {
-    if (!this.size) {
-      return null;
-    }
-
-    this.size--;
-    const result = this.storage[this.size];
+    let result = this.storage[--this.size];
     delete this.storage[this.size];
     return result;
   }
@@ -50,7 +45,7 @@ class Stack {
     return this.storage[this.size - 1];
   }
 
-  getSize() {
+  get_size() {
     return this.size;
   }
 
