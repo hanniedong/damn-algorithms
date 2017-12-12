@@ -1,7 +1,7 @@
 /*
 Eight months after "DAMN" was released, Kendrick Lamar released "DAMN COLLECTOR'S EDITION" which contained the exact same tracks, but with the album order reversed.
 
-Given an array of track names as strings, reverse the elements in the array in-place.
+Given an array of track names as strings, reverse the elements in the array in-place and without using JavaScript's Array.reverse method.
 
 Example:
 
