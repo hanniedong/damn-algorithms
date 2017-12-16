@@ -17,6 +17,8 @@ const good_kid_maad_city = {
   "Real": "7:23",
   "Compton": "4:08"
 };
+
+find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of Thirst"
 */
 
 /**
