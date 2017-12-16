@@ -7,7 +7,7 @@ Given a DNA sequence, write a function that returns an array of all the 7-letter
 
 Ex:
 let sequence = 'LOYALTYPOWERPOISONPAINJOYROYALTYLOYALTYAMBITIONROYALTYFLOWPAINPOISONLOYALTYJOY';
-find_repeated_DNA_sequences(sequence) => return ["LOYALTY", "ROYALTY"]
+find_repeated_dna_sequences(sequence) => return ["LOYALTY", "ROYALTY"]
 */
 
 /**
@@ -15,6 +15,6 @@ find_repeated_DNA_sequences(sequence) => return ["LOYALTY", "ROYALTY"]
  * @return {array}
  */
 
-const find_repeated_DNA_sequences = sequence => {};
+const find_repeated_dna_sequences = sequence => {};
 
-export default find_repeated_DNA_sequences;
+export default find_repeated_dna_sequences;
