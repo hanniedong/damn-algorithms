@@ -26,7 +26,7 @@ find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of T
  * @return {string}
  */
 
-const find_longest_track = (album) => {
+const find_longest_track = album => {
   let curr_longest_duration = Number.MIN_SAFE_INTEGER;
   let curr_longest_track = null;
 
@@ -43,7 +43,7 @@ const find_longest_track = (album) => {
 
 const convert_time_to_seconds = string => {
   return string.split(':').reduce((min, sec) => {
-    return (parseInt(min) * 60) + parseInt(sec);
+    return parseInt(min) * 60 + parseInt(sec);
   });
 };
 

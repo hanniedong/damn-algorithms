@@ -24,8 +24,6 @@ const good_kid_maad_city = {
  * @return {string}
  */
 
-const find_longest_track = (album) => {
-
-};
+const find_longest_track = album => {};
 
 export default find_longest_track;

@@ -16,7 +16,6 @@ let now_or_never_verse = 'Waking up in a dream Sleepwalking on another big stage
 can_formulate(target, now_or_never_verse); => return true
 */
 
-
 /**
  * @param {string} target
  * @param {string} lyrics
@@ -25,7 +24,7 @@ can_formulate(target, now_or_never_verse); => return true
 
 const can_formulate = (target, lyrics) => {
   if (target.length > lyrics.length) {
-   return false;
+    return false;
   }
 
   let target_lowercase = target.toLowerCase();
@@ -34,17 +33,17 @@ const can_formulate = (target, lyrics) => {
   let possible_chars = {};
 
   for (let char of lyrics_lowercase) {
-   possible_chars[char] = (possible_chars[char] || 0) + 1;
+    possible_chars[char] = (possible_chars[char] || 0) + 1;
   }
 
   for (let char of target_lowercase) {
-   possible_chars[char] = (possible_chars[char] || 0) - 1;
-   if (possible_chars[char] === -1) {
-     return false;
-   }
+    possible_chars[char] = (possible_chars[char] || 0) - 1;
+    if (possible_chars[char] === -1) {
+      return false;
+    }
   }
 
   return true;
-}
+};
 
 export default can_formulate;

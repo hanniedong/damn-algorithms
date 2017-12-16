@@ -14,8 +14,6 @@ reverse_track_order_in_place(album_tracks) => return ['DUCKWORTH', 'GOD', 'FEAR'
  * @return {array}
  */
 
-const reverse_track_order_in_place = tracks => {
-
-}
+const reverse_track_order_in_place = tracks => {};
 
 export default reverse_track_order_in_place;

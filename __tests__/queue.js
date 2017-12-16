@@ -28,13 +28,13 @@ test('Queue has an enqueue method', () => {
 test('Queue enqueue method adds items to the back of the queue', () => {
   const queue = new Queue();
   queue.enqueue('good');
-  expect(queue._storage).toMatchObject({"0": "good"});
+  expect(queue._storage).toMatchObject({ '0': 'good' });
   queue.enqueue('kid');
-  expect(queue._storage).toMatchObject({"0": "good", "1": "kid"});
+  expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid' });
   queue.enqueue('maad');
-  expect(queue._storage).toMatchObject({"0": "good", "1": "kid", "2": "maad"});
+  expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad' });
   queue.enqueue('city');
-  expect(queue._storage).toMatchObject({"0": "good", "1": "kid", "2": "maad", "3": "city"});
+  expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad', '3': 'city' });
 });
 
 test('Queue has an dequeue method', () => {
@@ -49,11 +49,11 @@ test('Queue dequeue method removes item from the front of the queue', () => {
   queue.enqueue('maad');
   queue.enqueue('city');
   queue.dequeue();
-  expect(queue._storage).toMatchObject({"1": "kid", "2": "maad", "3": "city"});
+  expect(queue._storage).toMatchObject({ '1': 'kid', '2': 'maad', '3': 'city' });
   queue.dequeue();
-  expect(queue._storage).toMatchObject({"2": "maad", "3": "city"});
+  expect(queue._storage).toMatchObject({ '2': 'maad', '3': 'city' });
   queue.dequeue();
-  expect(queue._storage).toMatchObject({"3": "city"});
+  expect(queue._storage).toMatchObject({ '3': 'city' });
   queue.dequeue();
   expect(queue._storage).toMatchObject({});
 });
@@ -63,7 +63,7 @@ test('Queue has a peek method', () => {
   expect(typeof queue.peek).toEqual('function');
 });
 
-test('Queue peek method returns value at the front of the queue, but doesn\'t alter storage', () => {
+test("Queue peek method returns value at the front of the queue, but doesn't alter storage", () => {
   const queue = new Queue();
   queue.enqueue('good');
   queue.enqueue('kid');

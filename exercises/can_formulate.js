@@ -16,15 +16,12 @@ let now_or_never_verse = 'Waking up in a dream Sleepwalking on another big stage
 can_formulate(target, now_or_never_verse); => return true
 */
 
-
 /**
  * @param {string} target
  * @param {string} lyrics
  * @return {boolean}
  */
 
-const can_formulate = (target, lyrics) => {
-
-}
+const can_formulate = (target, lyrics) => {};
 
 export default can_formulate;

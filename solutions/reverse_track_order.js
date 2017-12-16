@@ -25,6 +25,6 @@ const reverse_track_order_in_place = tracks => {
   }
 
   return tracks;
-}
+};
 
 export default reverse_track_order_in_place;
