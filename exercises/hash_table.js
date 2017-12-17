@@ -12,11 +12,11 @@ Note: Don't worry about handling collisions yet. For this implementation, it's o
 Examples:
 
 const ht = new HashTable(5); => array with 5 empty items, size = 5
-ht.add('github', 'alohaglenn'); => generates a hash of 3, stores 'alohaglenn' at index 3 of table
-ht.add('email', 'glenngonda@gmail.com'); => generates a hash of 0, stores 'glenngonda@gmail.com' at index 0 of table
-ht.get('github'); => returns 'alohaglenn'
-ht.get('email'); => returns 'glenngonda@gmail.com'
-ht.remove('email'); => deletes 'glenngonda@gmail.com' from table
+ht.add('album', 'good kid maad city'); => generates a hash of 1, stores 'good kid maad city' at index 1 of table
+ht.add('artist', 'Kendrick Lamar'); => generates a hash of 3, stores 'Kendrick Lamar' at index 3 of table
+ht.get('album'); => returns 'good kid maad city'
+ht.get('artist'); => returns 'Kendrick Lamar'
+ht.remove('artist'); => deletes 'Kendrick Lamar' from table
 */
 
 class HashTable {}
