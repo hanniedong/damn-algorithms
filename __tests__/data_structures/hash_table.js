@@ -1,4 +1,4 @@
-import HashTable from '../exercises/hash_table';
+import HashTable from '../../exercises/data_structures/hash_table';
 
 test('HashTable is a function', () => {
   expect(typeof HashTable).toEqual('function');

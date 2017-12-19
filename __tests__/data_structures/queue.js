@@ -1,4 +1,4 @@
-import Queue from '../exercises/queue';
+import Queue from '../../exercises/data_structures/queue';
 
 test('Queue is a function', () => {
   expect(typeof Queue).toEqual('function');

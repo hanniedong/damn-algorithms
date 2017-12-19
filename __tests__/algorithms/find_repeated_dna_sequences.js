@@ -1,4 +1,4 @@
-import find_repeated_dna_sequences from '../exercises/find_repeated_dna_sequences';
+import find_repeated_dna_sequences from '../../exercises/algorithms/find_repeated_dna_sequences';
 
 test('find_repeated_dna_sequences is a function', () => {
   const result = typeof find_repeated_dna_sequences;

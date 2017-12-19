@@ -1,4 +1,4 @@
-import Stack from '../exercises/stack';
+import Stack from '../../exercises/data_structures/stack';
 
 test('Stack is a function', () => {
   expect(typeof Stack).toEqual('function');
