@@ -29,4 +29,4 @@ class Node {}
 
 class LinkedList {}
 
-export default LinkedList;
+export { Node, LinkedList };

@@ -28,8 +28,8 @@ tour_stops.contains('san francisco'); => true
 class Node {
   constructor(value) {
     this.value = value;
-    this.next = null;
     this.prev = null;
+    this.next = null;
   }
 }
 
@@ -124,4 +124,4 @@ class LinkedList {
   }
 }
 
-export default LinkedList;
+export { Node, LinkedList };
