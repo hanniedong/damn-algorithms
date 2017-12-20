@@ -14,15 +14,15 @@ tour_stops.add('seattle');
 tour_stops.add('portland');
 tour_stops.add('san francisco');
 tour_stops.add('los angeles');
-tour_stops.remove('portland');
-tour_stops.to_array(); => return ['seattle', 'san francisco', 'los angeles', 'san diego', 'phoenix']
 tour_stops.add('san diego');
-tour_stops.add('phoenix');
-tour_stops.remove('seattle');
-tour_stops.find('los angeles'); => return 'los angeles'
-tour_stops.find('seattle'); => return null
-tour_stops.to_array(); => return ['san francisco', 'los angeles', 'san diego', 'phoenix']
+tour_stops.to_string(); => return 'seattle, portland, san francisco, los angeles, san diego'
+tour_stops.size(); => return 5
+tour_stops.remove('portland');
+tour_stops.to_array(); => return ['seattle', 'san francisco', 'los angeles', 'san diego']
 tour_stops.size(); => return 4
+tour_stops.index_of('los angeles'); => return 2
+tour_stops.contains('portland'); => return false
+tour_stops.contains('san francisco'); => true
 */
 
 class Node {
