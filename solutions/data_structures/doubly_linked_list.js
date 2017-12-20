@@ -78,16 +78,30 @@ class LinkedList {
     }
   }
 
-  find(value) {
+  contains(value) {
     let curr_node = this._head;
 
     while (curr_node) {
       if (curr_node.value === value) {
-        return curr_node.value;
+        return true;
       }
       curr_node = curr_node.next;
     }
-    return null;
+    return false;
+  }
+
+  index_of(value) {
+    let i = 0;
+    let curr_node = this._head;
+
+    while (curr_node) {
+      if (curr_node.value === value) {
+        return i;
+      }
+      curr_node = curr_node.next;
+      i++;
+    }
+    return -1;
   }
 
   size() {
@@ -103,6 +117,10 @@ class LinkedList {
       curr_node = curr_node.next;
     }
     return result;
+  }
+
+  to_string() {
+    return this.to_array().join(', ');
   }
 }
 
