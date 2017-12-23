@@ -26,7 +26,6 @@ test('HashTable has a generate_hash method', () => {
 
 test('HashTable generate_hash method returns an integer less than the size of the table', () => {
   const ht = new HashTable(11);
-  console.log('album: ', ht.generate_hash('artist'));
   expect(ht.generate_hash('Money Trees')).toBeGreaterThanOrEqual(0);
   expect(ht.generate_hash('Money Trees')).toBeLessThanOrEqual(ht._size);
   expect(ht.generate_hash('Backseat Freestyle')).toBeGreaterThanOrEqual(0);
