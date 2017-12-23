@@ -14,6 +14,30 @@ describe('ES6 Classes', () => {
   });
 });
 
+describe('Node constructor', () => {
+  test('has a value property equal to a given value', () => {
+    const node = new Node('good');
+    expect(node.value).toEqual('good');
+  });
+
+  test('has a left property that is initialized to null', () => {
+    const node = new Node('kid');
+    expect(node.left).toEqual(null);
+  });
+
+  test('has a left property that is initialized to null', () => {
+    const node = new Node('maad city');
+    expect(node.right).toEqual(null);
+  });
+});
+
+describe('BinarySearchTree constructor', () => {
+  test('has a root property that is initialized to null', () => {
+    const bst = new BinarySearchTree();
+    expect(bst._root).toEqual(null);
+  });
+});
+
 describe('add', () => {
   test('is a method', () => {
     const bst = new BinarySearchTree();
