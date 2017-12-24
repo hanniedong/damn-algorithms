@@ -80,6 +80,13 @@ describe('contains', () => {
   });
 });
 
+describe('breadth_first_search', () => {
+  test('breadth_first_search is a method', () => {
+    const graph = new Graph();
+    expect(typeof graph.bfs).toEqual('function');
+  });
+});
+
 describe('to_string', () => {
   test('is a method', () => {
     const graph = new Graph();
