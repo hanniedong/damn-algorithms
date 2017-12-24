@@ -22,6 +22,27 @@ class Graph {
     return this._adj_list[vertex] !== undefined;
   }
 
+  bfs(starting_vertex) {
+    let visited = {};
+    this._vertices.forEach(vertex => (visited[vertex] = false));
+    visited[starting_vertex] = true;
+
+    let queue = [];
+    queue.push(starting_vertex);
+
+    while (queue.length) {
+      let curr_vertex = queue.shift();
+      let curr_vertex_edges = this._adj_list[curr_vertex];
+
+      for (let vertex of curr_vertex_edges) {
+        if (!visited[vertex]) {
+          visited[vertex] = true;
+          queue.push(vertex);
+        }
+      }
+    }
+  }
+
   to_string() {
     let result = '';
 
