@@ -4,6 +4,7 @@ Implement a binary search tree using two classes. The Node class should take in 
 The Binary Search Tree class should also have the following methods:
 add - takes in a value and a node and appends a new node to the tree in the appropriate place
 contains - traverses the tree and returns a boolean based on if a given value is present
+dfs - performs a depth-first traversal of the tree and executes a given callback in a given order ('in', 'pre', or 'post')
 get_min - traverses the tree and returns the minimum value in the tree
 get_max -traverses the tree and returns the maximum value in the tree
 
@@ -69,6 +70,28 @@ class BinarySearchTree {
     }
 
     return false;
+  }
+
+  dfs(cb, order, node = this._root) {
+    if (order === 'pre') {
+      cb(node);
+    }
+
+    if (node.left) {
+      this.dfs(cb, order, node.left);
+    }
+
+    if (order === 'in') {
+      cb(node);
+    }
+
+    if (node.right) {
+      this.dfs(cb, order, node.right);
+    }
+
+    if (order === 'post') {
+      cb(node);
+    }
   }
 
   get_min(node = this._root) {
