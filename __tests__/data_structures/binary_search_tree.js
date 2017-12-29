@@ -94,6 +94,13 @@ describe('contains', () => {
   });
 });
 
+describe('dfs', () => {
+  test('is a method', () => {
+    const bst = new BinarySearchTree();
+    expect(typeof bst.dfs).toEqual('function');
+  });
+});
+
 describe('get_min', () => {
   test('is a method', () => {
     const bst = new BinarySearchTree();
