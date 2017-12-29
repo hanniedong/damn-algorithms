@@ -72,24 +72,24 @@ class BinarySearchTree {
     return false;
   }
 
-  dfs(cb, order, node = this._root) {
-    if (order === 'pre') {
+  dfs(cb, order_type, node = this._root) {
+    if (order_type === 'pre') {
       cb(node);
     }
 
     if (node.left) {
-      this.dfs(cb, order, node.left);
+      this.dfs(cb, order_type, node.left);
     }
 
-    if (order === 'in') {
+    if (order_type === 'in') {
       cb(node);
     }
 
     if (node.right) {
-      this.dfs(cb, order, node.right);
+      this.dfs(cb, order_type, node.right);
     }
 
-    if (order === 'post') {
+    if (order_type === 'post') {
       cb(node);
     }
   }
