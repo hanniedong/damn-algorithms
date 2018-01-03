@@ -25,6 +25,10 @@ return 4
  */
 
 const count_swimming_pools = matrix => {
+  if (!Array.isArray(matrix) || !matrix.length) {
+    return 0;
+  }
+
   let result = 0;
 
   let row = matrix.length;

@@ -19,9 +19,19 @@ describe('count_swimming_pools', () => {
     expect(e).toBeGreaterThanOrEqual(0);
   });
 
-  test('returns 0 for an empty matrix', () => {
-    const result = count_swimming_pools([[]]);
-    expect(result).toEqual(0);
+  test('returns 0 for an invalid matrix', () => {
+    const a = count_swimming_pools([]);
+    expect(a).toEqual(0);
+    const b = count_swimming_pools('drank');
+    expect(b).toEqual(0);
+    const c = count_swimming_pools(null);
+    expect(c).toEqual(0);
+    const d = count_swimming_pools(undefined);
+    expect(d).toEqual(0);
+    const e = count_swimming_pools({ Swimming: 'Pools' });
+    expect(e).toEqual(0);
+    const f = count_swimming_pools(() => {});
+    expect(f).toEqual(0);
   });
 
   test('returns 1 for matrix [[0]]', () => {
