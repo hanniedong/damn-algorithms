@@ -19,6 +19,11 @@ Example:
 return 4
  */
 
+/**
+ * @param {number[][]} matrix
+ * @return {number}
+ */
+
 const count_swimming_pools = matrix => {
   let result = 0;
 
