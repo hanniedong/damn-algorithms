@@ -7,7 +7,7 @@ Note: Assume both inputs will be valid strings.
 
 Examples:
 
-let target = 'Hack Reactor'
+let target = 'JavaScript'
 let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
 can_formulate(target, good_kid_chorus); => return false
 

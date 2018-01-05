@@ -1,13 +1,11 @@
 /*
 Given an arbitrary target string and another string of lyrics, write a function that returns a boolean of whether or not the target string can be formulated from the lyrics.
 
-Each letter in the lyrics string can only be used once in your target string.
-
-Note: Assume both inputs will be valid strings.
+You can assume that both inputs will be strings. Each letter in the lyrics string can only be used once in your target string. The algorithm should also be case insensitive.
 
 Examples:
 
-let target = 'Hack Reactor'
+let target = 'JavaScript'
 let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
 can_formulate(target, good_kid_chorus); => return false
 
