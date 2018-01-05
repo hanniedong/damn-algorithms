@@ -1,5 +1,5 @@
 /*
-Create a Stack class WITHOUT using an array and WITHOUT implementing any JavaScript array methods (Array.push, Array.pop, etc).
+Create a Stack class WITHOUT using an array and WITHOUT implementing any JavaScript array methods (Array.prototype.push, Array.prototype.pop, etc). Use an object for storage instead.
 
 The Stack class should have the following methods:
 push - adds a value to the top of the stack
