@@ -1,8 +1,7 @@
 /*
-Given an object of track names and durations, write a function that returns the track name with the longest duration.
+Given an object of track names and durations, write a function that returns the track name with the longest duration. Consider how you can convert the given durations into a format that will calculate correct comparisons.
 
 Example:
-
 const good_kid_maad_city = {
   "Sherane a.k.a. Master Splinter's Daughter": "4:34",
   "*****, Don't Kill My Vibe": "5:11",
