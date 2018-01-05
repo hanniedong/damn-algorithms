@@ -1,4 +1,4 @@
-import Queue from '../../exercises/data_structures/queue';
+import Queue from '../../exercises/data_structures/02_queue';
 
 describe('ES6 Class', () => {
   test('has a Queue class', () => {

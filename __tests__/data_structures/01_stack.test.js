@@ -1,4 +1,4 @@
-import Stack from '../../exercises/data_structures/stack';
+import Stack from '../../exercises/data_structures/01_stack';
 
 describe('ES6 Class', () => {
   test('has a Stack class', () => {
