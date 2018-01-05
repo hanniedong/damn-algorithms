@@ -1,5 +1,5 @@
 /*
-Create a Queue class WITHOUT using an array and WITHOUT implementing any JavaScript array methods (Array.push, Array.shift, etc).
+Create a Queue class WITHOUT using an array and WITHOUT implementing any JavaScript array methods (Array.prototype.push, Array.prototype.shift, etc). Use an object for storage instead.
 
 The Queue class should have the following methods:
 enqueue - adds a value to the back of the queue
