@@ -6,7 +6,7 @@ Given an array of track names as strings, reverse the elements in the array in-p
 Example:
 
 let album_tracks = ['BLOOD', 'DNA', 'YAH', 'ELEMENT', 'FEEL', 'LOYALTY', 'PRIDE', 'HUMBLE', 'LUST', 'LOVE', 'XXX', 'FEAR', 'GOD', 'DUCKWORTH'];
-reverse_track_order_in_place(album_tracks) => return ['DUCKWORTH', 'GOD', 'FEAR', 'XXX', 'LOVE', 'LUST', 'HUMBLE', 'PRIDE', 'LOYALTY','FEEL', 'ELEMENT', 'YAH', 'DNA', 'BLOOD']
+reverse_tracks_in_place(album_tracks) => return ['DUCKWORTH', 'GOD', 'FEAR', 'XXX', 'LOVE', 'LUST', 'HUMBLE', 'PRIDE', 'LOYALTY','FEEL', 'ELEMENT', 'YAH', 'DNA', 'BLOOD']
 */
 
 /**
@@ -14,6 +14,6 @@ reverse_track_order_in_place(album_tracks) => return ['DUCKWORTH', 'GOD', 'FEAR'
  * @return {array}
  */
 
-const reverse_track_order_in_place = tracks => {};
+const reverse_tracks_in_place = tracks => {};
 
-export default reverse_track_order_in_place;
+export default reverse_tracks_in_place;
