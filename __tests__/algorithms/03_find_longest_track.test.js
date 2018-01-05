@@ -1,4 +1,4 @@
-import find_longest_track from '../../exercises/algorithms/find_longest_track';
+import find_longest_track from '../../exercises/algorithms/03_find_longest_track';
 
 describe('find_longest_track', () => {
   test('is a function', () => {

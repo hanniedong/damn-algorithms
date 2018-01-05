@@ -1,4 +1,4 @@
-import reverse_tracks_in_place from '../../exercises/algorithms/reverse_tracks_in_place';
+import reverse_tracks_in_place from '../../exercises/algorithms/02_reverse_tracks_in_place';
 
 describe('reverse_tracks_in_place', () => {
   test('is a function', () => {
