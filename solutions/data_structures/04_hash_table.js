@@ -1,5 +1,5 @@
 /*
-Create a Hash Table class that contains table and size properties inside its constructor. It should create an array of size n based on a given integer n.
+Create a Hash Table class that contains table and size properties. It should create an array of size n based on a given integer n.
 
 The Hash Table class should have the following methods:
 generate_hash - generates an index within the table where the value should be stored
