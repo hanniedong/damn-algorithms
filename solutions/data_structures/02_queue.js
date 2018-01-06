@@ -37,9 +37,10 @@ class Queue {
   }
 
   dequeue() {
-    let result = this._storage[this._front];
-    delete this._storage[this._front++];
-    return result;
+    let value = this._storage[this._front];
+    delete this._storage[this._front];
+    this._front++;
+    return value;
   }
 
   peek() {
