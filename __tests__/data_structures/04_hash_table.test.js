@@ -9,35 +9,35 @@ describe('ES6 Class', () => {
 });
 
 describe('HashTable constructor', () => {
-  test('is initialized with a _table property that is an array', () => {
+  test('is initialized with a table property that is an array', () => {
     const ht = new HashTable(11);
-    expect(Array.isArray(ht._table)).toBeTruthy();
+    expect(Array.isArray(ht.table)).toBeTruthy();
   });
 
-  test('is initialized with a _size property that is a number', () => {
+  test('is initialized with a size property that is a number', () => {
     const ht = new HashTable(11);
-    expect(typeof ht._size).toEqual('number');
+    expect(typeof ht.size).toEqual('number');
   });
 });
 
-describe('generate_hash', () => {
+describe('generateHash', () => {
   test('is a method', () => {
     const ht = new HashTable(11);
-    expect(typeof ht.generate_hash).toEqual('function');
+    expect(typeof ht.generateHash).toEqual('function');
   });
 
   test('returns an integer less than the size of the table', () => {
     const ht = new HashTable(11);
-    expect(ht.generate_hash('Money Trees')).toBeGreaterThanOrEqual(0);
-    expect(ht.generate_hash('Money Trees')).toBeLessThanOrEqual(ht._size);
-    expect(ht.generate_hash('Backseat Freestyle')).toBeGreaterThanOrEqual(0);
-    expect(ht.generate_hash('Backseat Freestyle')).toBeLessThanOrEqual(ht._size);
-    expect(ht.generate_hash('Poetic Justice')).toBeGreaterThanOrEqual(0);
-    expect(ht.generate_hash('Poetic Justice')).toBeLessThanOrEqual(ht._size);
-    expect(ht.generate_hash('Swimming Pools')).toBeGreaterThanOrEqual(0);
-    expect(ht.generate_hash('Swimming Pools')).toBeLessThanOrEqual(ht._size);
-    expect(ht.generate_hash('Compton')).toBeGreaterThanOrEqual(0);
-    expect(ht.generate_hash('Compton')).toBeLessThanOrEqual(ht._size);
+    expect(ht.generateHash('Money Trees')).toBeGreaterThanOrEqual(0);
+    expect(ht.generateHash('Money Trees')).toBeLessThanOrEqual(ht.size);
+    expect(ht.generateHash('Backseat Freestyle')).toBeGreaterThanOrEqual(0);
+    expect(ht.generateHash('Backseat Freestyle')).toBeLessThanOrEqual(ht.size);
+    expect(ht.generateHash('Poetic Justice')).toBeGreaterThanOrEqual(0);
+    expect(ht.generateHash('Poetic Justice')).toBeLessThanOrEqual(ht.size);
+    expect(ht.generateHash('Swimming Pools')).toBeGreaterThanOrEqual(0);
+    expect(ht.generateHash('Swimming Pools')).toBeLessThanOrEqual(ht.size);
+    expect(ht.generateHash('Compton')).toBeGreaterThanOrEqual(0);
+    expect(ht.generateHash('Compton')).toBeLessThanOrEqual(ht.size);
   });
 });
 
@@ -50,9 +50,9 @@ describe('add', () => {
   test('inserts a value into the table based on a given key', () => {
     const ht = new HashTable(11);
     ht.add('album', 'good kid maad city');
-    expect(ht._table.indexOf('good kid maad city')).toBeGreaterThanOrEqual(0);
+    expect(ht.table.indexOf('good kid maad city')).toBeGreaterThanOrEqual(0);
     ht.add('artist', 'Kendrick Lamar');
-    expect(ht._table.indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
+    expect(ht.table.indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
   });
 });
 
@@ -67,10 +67,10 @@ describe('remove', () => {
     ht.add('album', 'good kid maad city');
     ht.add('artist', 'Kendrick Lamar');
     ht.remove('album');
-    expect(ht._table.indexOf('good kid maad city')).toBe(-1);
-    expect(ht._table.indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
+    expect(ht.table.indexOf('good kid maad city')).toBe(-1);
+    expect(ht.table.indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
     ht.remove('artist');
-    expect(ht._table.indexOf('Kendrick Lamar')).toBe(-1);
+    expect(ht.table.indexOf('Kendrick Lamar')).toBe(-1);
   });
 });
 

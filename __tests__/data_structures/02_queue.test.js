@@ -11,13 +11,13 @@ describe('ES6 Class', () => {
 describe('Queue constructor', () => {
   test('has front and back properties that are initialized to 0', () => {
     const queue = new Queue();
-    expect(queue._front).toEqual(0);
-    expect(queue._back).toEqual(0);
+    expect(queue.front).toEqual(0);
+    expect(queue.back).toEqual(0);
   });
 
   test('has a storage property that initialized to an object', () => {
     const queue = new Queue();
-    expect(queue._storage).toMatchObject({});
+    expect(queue.storage).toMatchObject({});
   });
 });
 
@@ -30,13 +30,13 @@ describe('enqueue', () => {
   test('adds values to the back of the queue', () => {
     const queue = new Queue();
     queue.enqueue('good');
-    expect(queue._storage).toMatchObject({ '0': 'good' });
+    expect(queue.storage).toMatchObject({ '0': 'good' });
     queue.enqueue('kid');
-    expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid' });
+    expect(queue.storage).toMatchObject({ '0': 'good', '1': 'kid' });
     queue.enqueue('maad');
-    expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad' });
+    expect(queue.storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad' });
     queue.enqueue('city');
-    expect(queue._storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad', '3': 'city' });
+    expect(queue.storage).toMatchObject({ '0': 'good', '1': 'kid', '2': 'maad', '3': 'city' });
   });
 });
 
@@ -53,13 +53,13 @@ describe('dequeue', () => {
     queue.enqueue('maad');
     queue.enqueue('city');
     queue.dequeue();
-    expect(queue._storage).toMatchObject({ '1': 'kid', '2': 'maad', '3': 'city' });
+    expect(queue.storage).toMatchObject({ '1': 'kid', '2': 'maad', '3': 'city' });
     queue.dequeue();
-    expect(queue._storage).toMatchObject({ '2': 'maad', '3': 'city' });
+    expect(queue.storage).toMatchObject({ '2': 'maad', '3': 'city' });
     queue.dequeue();
-    expect(queue._storage).toMatchObject({ '3': 'city' });
+    expect(queue.storage).toMatchObject({ '3': 'city' });
     queue.dequeue();
-    expect(queue._storage).toMatchObject({});
+    expect(queue.storage).toMatchObject({});
   });
 });
 
@@ -86,23 +86,23 @@ describe('peek', () => {
   });
 });
 
-describe('get_size', () => {
+describe('getSize', () => {
   test('is a method', () => {
     const queue = new Queue();
-    expect(typeof queue.get_size).toEqual('function');
+    expect(typeof queue.getSize).toEqual('function');
   });
 
   test('retuns the number of values in storage', () => {
     const queue = new Queue();
-    expect(queue.get_size()).toEqual(0);
+    expect(queue.getSize()).toEqual(0);
     queue.enqueue('good');
-    expect(queue.get_size()).toEqual(1);
+    expect(queue.getSize()).toEqual(1);
     queue.enqueue('kid');
-    expect(queue.get_size()).toEqual(2);
+    expect(queue.getSize()).toEqual(2);
     queue.dequeue();
-    expect(queue.get_size()).toEqual(1);
+    expect(queue.getSize()).toEqual(1);
     queue.dequeue();
-    expect(queue.get_size()).toEqual(0);
+    expect(queue.getSize()).toEqual(0);
   });
 });
 
@@ -119,6 +119,6 @@ describe('reset', () => {
     queue.enqueue('maad');
     queue.enqueue('city');
     queue.reset();
-    expect(queue._storage).toMatchObject({});
+    expect(queue.storage).toMatchObject({});
   });
 });

@@ -1,61 +1,61 @@
 /*
-UNDIRECTED GRAPH - adjacent list implementation
-
 Create a Graph class that contains properties for its vertices and adjacent list. It should the vertices in a list and the adjacent list should be implemented as an object.
 
 The Graph class should have the following methods:
-add_vertex - creates a vertex with a given value and adds it to the vertices list and adjacent list
-add_edge - takes in two vertices and creates a relationship between them
+addVertex - creates a vertex with a given value and adds it to the vertices list and adjacent list
+addEdge - takes in two vertices and creates a relationship between them
 contains - returns a boolean based on if a given vertex is present in the adjacent list
 bfs - performs a breadth-first traversal of the graph based on a starting vertex
-to_string -gets the values in the adjacent list and transforms it into a string
+toString -gets the values in the adjacent list and transforms it into a string
 
 Example:
 
-const artists_graph = new Graph();
+const artistsGraph = new Graph();
 let artists = ['kendrick lamar', 'jay rock', 'drake', 'mc eiht', 'anna wise', 'dr. dre'];
-artists.forEach(artist => artists_graph.add_vertex(artist));
-artists_graph.add_edge('kendrick lamar', 'jay rock');
-artists_graph.add_edge('kendrick lamar', 'dr. dre');
-artists_graph.add_edge('kendrick lamar', 'drake');
-artists_graph.contains('kendrick lamar'); => return true
-artists_graph.bfs('kendrick lamar'); => traverses all nodes in artists_graph from this vertex
-artists_graph.to_string(); => return 'kendrick lamar => jay rock, dr. dre, drake\njay rock => kendrick lamar\ndrake => kendrick lamar\nmc eiht => \nanna wise => \ndr. dre => kendrick lamar'
+artists.forEach(artist => artistsGraph.addVertex(artist));
+artistsGraph.addEdge('kendrick lamar', 'jay rock');
+artistsGraph.addEdge('kendrick lamar', 'dr. dre');
+artistsGraph.addEdge('kendrick lamar', 'drake');
+artistsGraph.contains('kendrick lamar'); => return true
+artistsGraph.bfs('kendrick lamar'); => traverses all nodes in artistsGraph from this vertex
+artistsGraph.toString(); => return 'kendrick lamar => jay rock, dr. dre, drake\njay rock => kendrick lamar\ndrake => kendrick lamar\nmc eiht => \nanna wise => \ndr. dre => kendrick lamar'
 */
 
 class Graph {
   constructor() {
-    this._vertices = [];
-    this._adj_list = {};
+    this.vertices = [];
+    this.adjList = {};
   }
 
-  add_vertex(vertex) {
-    this._vertices.push(vertex);
-    this._adj_list[vertex] = [];
+  addVertex(vertex) {
+    this.vertices.push(vertex);
+    this.adjList[vertex] = [];
   }
 
-  add_edge(from_vertex, to_vertex) {
-    this._adj_list[from_vertex].push(to_vertex);
-    this._adj_list[to_vertex].push(from_vertex);
+  addEdge(fromVertex, toVertex) {
+    this.adjList[fromVertex].push(toVertex);
+    this.adjList[toVertex].push(fromVertex);
   }
 
   contains(vertex) {
-    return this._adj_list[vertex] !== undefined;
+    return this.adjList[vertex] !== undefined;
   }
 
-  bfs(starting_vertex) {
-    let visited = {};
-    this._vertices.forEach(vertex => (visited[vertex] = false));
-    visited[starting_vertex] = true;
+  bfs(startingVertex) {
+    const visited = {};
+    this.vertices.forEach((vertex) => {
+      visited[vertex] = false;
+    });
+    visited[startingVertex] = true;
 
-    let queue = [];
-    queue.push(starting_vertex);
+    const queue = [];
+    queue.push(startingVertex);
 
     while (queue.length) {
-      let curr_vertex = queue.shift();
-      let curr_vertex_edges = this._adj_list[curr_vertex];
+      const currVertex = queue.shift();
+      const currVertexEdges = this.adjList[currVertex];
 
-      for (let vertex of curr_vertex_edges) {
+      for (const vertex of currVertexEdges) {
         if (!visited[vertex]) {
           visited[vertex] = true;
           queue.push(vertex);
@@ -64,13 +64,15 @@ class Graph {
     }
   }
 
-  to_string() {
+  toString() {
     let result = '';
 
-    const artists = Object.keys(this._adj_list);
+    const artists = Object.keys(this.adjList);
 
     artists.forEach((artist, idx) => {
-      result += `${artist} => ${this._adj_list[artist].join(', ')}${idx < artists.length - 1 ? '\n' : ''}`;
+      result += `${artist} =>
+      ${this.adjList[artist].join(', ')}
+      ${idx < artists.length - 1 ? '\n' : ''}`;
     });
 
     return result;

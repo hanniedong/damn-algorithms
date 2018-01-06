@@ -27,14 +27,14 @@ describe('Node constructor', () => {
 });
 
 describe('LinkedList constructor', () => {
-  test('has a_head property that is initialized to null', () => {
+  test('has ahead property that is initialized to null', () => {
     const ll = new LinkedList();
-    expect(ll._head).toEqual(null);
+    expect(ll.head).toEqual(null);
   });
 
-  test('has a _length property that is initialized to 0', () => {
+  test('has a length property that is initialized to 0', () => {
     const ll = new LinkedList();
-    expect(ll._length).toEqual(0);
+    expect(ll.length).toEqual(0);
   });
 });
 
@@ -48,9 +48,9 @@ describe('add', () => {
     const ll = new LinkedList();
     ll.add('good');
     ll.add('kid');
-    expect(ll._head.value).toEqual('good');
-    expect(ll._head.next.value).toEqual('kid');
-    expect(ll._head.next.next).toEqual(null);
+    expect(ll.head.value).toEqual('good');
+    expect(ll.head.next.value).toEqual('kid');
+    expect(ll.head.next.next).toEqual(null);
   });
 });
 
@@ -66,16 +66,16 @@ describe('remove', () => {
     ll.add('kid');
     ll.add('maad');
     ll.add('city');
-    expect(ll.to_array()).toEqual(['good', 'kid', 'maad', 'city']);
-    expect(ll._head.value).toEqual('good');
-    expect(ll._head.next.value).toEqual('kid');
-    expect(ll._head.next.next.value).toEqual('maad');
-    expect(ll._head.next.next.next.value).toEqual('city');
+    expect(ll.toArray()).toEqual(['good', 'kid', 'maad', 'city']);
+    expect(ll.head.value).toEqual('good');
+    expect(ll.head.next.value).toEqual('kid');
+    expect(ll.head.next.next.value).toEqual('maad');
+    expect(ll.head.next.next.next.value).toEqual('city');
     ll.remove('maad');
     ll.remove('kid');
-    expect(ll.to_array()).toEqual(['good', 'city']);
-    expect(ll._head.value).toEqual('good');
-    expect(ll._head.next.value).toEqual('city');
+    expect(ll.toArray()).toEqual(['good', 'city']);
+    expect(ll.head.value).toEqual('good');
+    expect(ll.head.next.value).toEqual('city');
   });
 });
 
@@ -93,24 +93,24 @@ describe('contains', () => {
     expect(ll.contains('kid')).toBeTruthy();
     expect(ll.contains('maad')).toBeFalsy();
     expect(ll.contains('city')).toBeFalsy();
-    expect(ll._head.value).toEqual('good');
-    expect(ll._head.next.value).toEqual('kid');
-    expect(ll._length).toEqual(2);
+    expect(ll.head.value).toEqual('good');
+    expect(ll.head.next.value).toEqual('kid');
+    expect(ll.length).toEqual(2);
     ll.remove('good');
     expect(ll.contains('good')).toBeFalsy();
-    expect(ll._head.value).toEqual('kid');
-    expect(ll._length).toEqual(1);
+    expect(ll.head.value).toEqual('kid');
+    expect(ll.length).toEqual(1);
     ll.remove('kid');
     expect(ll.contains('kid')).toBeFalsy();
-    expect(ll._head).toEqual(null);
-    expect(ll._length).toEqual(0);
+    expect(ll.head).toEqual(null);
+    expect(ll.length).toEqual(0);
   });
 });
 
-describe('index_of', () => {
+describe('indexOf', () => {
   test('is a method', () => {
     const ll = new LinkedList();
-    expect(typeof ll.index_of).toEqual('function');
+    expect(typeof ll.indexOf).toEqual('function');
   });
 
   test('returns the position in the list for a given value', () => {
@@ -119,16 +119,16 @@ describe('index_of', () => {
     ll.add('kid');
     ll.add('maad');
     ll.add('city');
-    expect(ll.index_of('good')).toEqual(0);
-    expect(ll.index_of('kid')).toEqual(1);
-    expect(ll.index_of('maad')).toEqual(2);
-    expect(ll.index_of('city')).toEqual(3);
+    expect(ll.indexOf('good')).toEqual(0);
+    expect(ll.indexOf('kid')).toEqual(1);
+    expect(ll.indexOf('maad')).toEqual(2);
+    expect(ll.indexOf('city')).toEqual(3);
     expect(ll.remove('good'));
     expect(ll.remove('kid'));
-    expect(ll.index_of('good')).toEqual(-1);
-    expect(ll.index_of('kid')).toEqual(-1);
-    expect(ll.index_of('maad')).toEqual(0);
-    expect(ll.index_of('city')).toEqual(1);
+    expect(ll.indexOf('good')).toEqual(-1);
+    expect(ll.indexOf('kid')).toEqual(-1);
+    expect(ll.indexOf('maad')).toEqual(0);
+    expect(ll.indexOf('city')).toEqual(1);
   });
 });
 
@@ -156,44 +156,44 @@ describe('size', () => {
   });
 });
 
-describe('to_array', () => {
+describe('toArray', () => {
   test('is a method', () => {
     const ll = new LinkedList();
-    expect(typeof ll.to_array).toEqual('function');
+    expect(typeof ll.toArray).toEqual('function');
   });
 
   test("creates an array based on the list's values", () => {
     const ll = new LinkedList();
-    expect(ll.to_array()).toEqual([]);
+    expect(ll.toArray()).toEqual([]);
     ll.add('good');
-    expect(ll.to_array()).toEqual(['good']);
+    expect(ll.toArray()).toEqual(['good']);
     ll.add('kid');
     ll.add('maad');
     ll.add('city');
-    expect(ll.to_array()).toEqual(['good', 'kid', 'maad', 'city']);
+    expect(ll.toArray()).toEqual(['good', 'kid', 'maad', 'city']);
     ll.remove('good');
     ll.remove('kid');
-    expect(ll.to_array()).toEqual(['maad', 'city']);
+    expect(ll.toArray()).toEqual(['maad', 'city']);
   });
 });
 
-describe('to_string', () => {
+describe('toString', () => {
   test('is a method', () => {
     const ll = new LinkedList();
-    expect(typeof ll.to_string).toEqual('function');
+    expect(typeof ll.toString).toEqual('function');
   });
 
   test("creates a string based on the list's values", () => {
     const ll = new LinkedList();
-    expect(ll.to_string()).toEqual('');
+    expect(ll.toString()).toEqual('');
     ll.add('good');
-    expect(ll.to_string()).toEqual('good');
+    expect(ll.toString()).toEqual('good');
     ll.add('kid');
     ll.add('maad');
     ll.add('city');
-    expect(ll.to_string()).toEqual('good, kid, maad, city');
+    expect(ll.toString()).toEqual('good, kid, maad, city');
     ll.remove('good');
     ll.remove('kid');
-    expect(ll.to_string()).toEqual('maad, city');
+    expect(ll.toString()).toEqual('maad, city');
   });
 });

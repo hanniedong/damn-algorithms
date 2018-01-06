@@ -6,25 +6,25 @@ add - appends a given value to the end of the list
 remove - deletes a given value from the list
 contains - traverses the list and returns a boolean based on if a given value is present
 size - returns the length of the list
-to_array - gets the values in the list and transforms it into an array
-to_string - gets the values in the list and transforms it into a string
+toArray - gets the values in the list and transforms it into an array
+toString - gets the values in the list and transforms it into a string
 
 Example:
-const tour_stops = new LinkedList();
-tour_stops.add('seattle');
-tour_stops.add('portland');
-tour_stops.add('san francisco');
-tour_stops.add('los angeles');
-tour_stops.remove('portland');
-tour_stops.to_array(); => return ['seattle', 'san francisco', 'los angeles']
-tour_stops.add('san diego');
-tour_stops.add('phoenix');
-tour_stops.size(); => return 5
-tour_stops.remove('seattle');
-tour_stops.contains('los angeles'); => return true
-tour_stops.contains('seattle'); => return false
-tour_stops.to_array(); => return ['san francisco', 'los angeles', 'san diego', 'phoenix']
-tour_stops.size(); => return 4
+const tourStops = new LinkedList();
+tourStops.add('seattle');
+tourStops.add('portland');
+tourStops.add('san francisco');
+tourStops.add('los angeles');
+tourStops.remove('portland');
+tourStops.toArray(); => return ['seattle', 'san francisco', 'los angeles']
+tourStops.add('san diego');
+tourStops.add('phoenix');
+tourStops.size(); => return 5
+tourStops.remove('seattle');
+tourStops.contains('los angeles'); => return true
+tourStops.contains('seattle'); => return false
+tourStops.toArray(); => return ['san francisco', 'los angeles', 'san diego', 'phoenix']
+tourStops.size(); => return 4
 */
 
 class Node {
@@ -36,86 +36,86 @@ class Node {
 
 class LinkedList {
   constructor() {
-    this._head = null;
-    this._length = 0;
+    this.head = null;
+    this.length = 0;
   }
 
   add(value) {
     const node = new Node(value);
 
-    if (!this._head) {
-      this._head = node;
+    if (!this.head) {
+      this.head = node;
     } else {
-      let curr_node = this._head;
-      while (curr_node.next) {
-        curr_node = curr_node.next;
+      let currNode = this.head;
+      while (currNode.next) {
+        currNode = currNode.next;
       }
-      curr_node.next = node;
+      currNode.next = node;
     }
 
-    this._length++;
+    this.length += 1;
   }
 
   remove(value) {
-    let curr_node = this._head;
+    let currNode = this.head;
 
-    if (curr_node.value === value) {
-      this._head = curr_node.next;
+    if (currNode.value === value) {
+      this.head = currNode.next;
     } else {
-      let prev_node = null;
+      let prevNode = null;
 
-      while (curr_node.value !== value) {
-        prev_node = curr_node;
-        curr_node = curr_node.next;
+      while (currNode.value !== value) {
+        prevNode = currNode;
+        currNode = currNode.next;
       }
-      prev_node.next = curr_node.next;
+      prevNode.next = currNode.next;
     }
-    this._length--;
+    this.length -= 1;
   }
 
   contains(value) {
-    let curr_node = this._head;
+    let currNode = this.head;
 
-    while (curr_node) {
-      if (curr_node.value === value) {
+    while (currNode) {
+      if (currNode.value === value) {
         return true;
       }
-      curr_node = curr_node.next;
+      currNode = currNode.next;
     }
     return false;
   }
 
-  index_of(value) {
+  indexOf(value) {
     let i = 0;
-    let curr_node = this._head;
+    let currNode = this.head;
 
-    while (curr_node) {
-      if (curr_node.value === value) {
+    while (currNode) {
+      if (currNode.value === value) {
         return i;
       }
-      curr_node = curr_node.next;
-      i++;
+      currNode = currNode.next;
+      i += 1;
     }
     return -1;
   }
 
   size() {
-    return this._length;
+    return this.length;
   }
 
-  to_array() {
-    let result = [];
-    let curr_node = this._head;
+  toArray() {
+    const result = [];
+    let currNode = this.head;
 
-    while (curr_node) {
-      result.push(curr_node.value);
-      curr_node = curr_node.next;
+    while (currNode) {
+      result.push(currNode.value);
+      currNode = currNode.next;
     }
     return result;
   }
 
-  to_string() {
-    return this.to_array().join(', ');
+  toString() {
+    return this.toArray().join(', ');
   }
 }
 

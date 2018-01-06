@@ -34,7 +34,7 @@ describe('Node constructor', () => {
 describe('BinarySearchTree constructor', () => {
   test('has a root property that is initialized to null', () => {
     const bst = new BinarySearchTree();
-    expect(bst._root).toEqual(null);
+    expect(bst.root).toEqual(null);
   });
 });
 
@@ -46,26 +46,24 @@ describe('add', () => {
 
   test('inserts nodes in the proper place', () => {
     const bst = new BinarySearchTree();
-    expect(bst._root).toEqual(null);
+    expect(bst.root).toEqual(null);
     bst.add(0);
-    expect(bst._root.value).toEqual(0);
+    expect(bst.root.value).toEqual(0);
     bst.add(-1);
-    expect(bst._root.left.value).toEqual(-1);
-    expect(bst._root.left.right).toEqual(null);
+    expect(bst.root.left.value).toEqual(-1);
+    expect(bst.root.left.right).toEqual(null);
     bst.add(1);
-    expect(bst._root.right.value).toEqual(1);
-    bst.add(1);
-    expect(bst._root.right.left.value).toEqual(1);
+    expect(bst.root.right.value).toEqual(1);
     bst.add(5);
-    expect(bst._root.right.right.value).toEqual(5);
-    expect(bst._root.right.right.left).toEqual(null);
-    expect(bst._root.right.right.right).toEqual(null);
+    expect(bst.root.right.right.value).toEqual(5);
+    expect(bst.root.right.right.left).toEqual(null);
+    expect(bst.root.right.right.right).toEqual(null);
     bst.add(2);
-    expect(bst._root.right.right.left.value).toEqual(2);
+    expect(bst.root.right.right.left.value).toEqual(2);
     bst.add(-2);
-    expect(bst._root.left.left.value).toEqual(-2);
-    expect(bst._root.left.left.left).toEqual(null);
-    expect(bst._root.left.left.right).toEqual(null);
+    expect(bst.root.left.left.value).toEqual(-2);
+    expect(bst.root.left.left.left).toEqual(null);
+    expect(bst.root.left.left.right).toEqual(null);
   });
 });
 
@@ -101,10 +99,10 @@ describe('dfs', () => {
   });
 });
 
-describe('get_min', () => {
+describe('getMin', () => {
   test('is a method', () => {
     const bst = new BinarySearchTree();
-    expect(typeof bst.get_min).toEqual('function');
+    expect(typeof bst.getMin).toEqual('function');
   });
 
   test('returns the smallest value in the tree', () => {
@@ -114,14 +112,14 @@ describe('get_min', () => {
     bst.add(1);
     bst.add(-3);
     bst.add(-1);
-    expect(bst.get_min()).toEqual(-3);
+    expect(bst.getMin()).toEqual(-3);
   });
 });
 
-describe('get_max', () => {
+describe('getMax', () => {
   test('is a method', () => {
     const bst = new BinarySearchTree();
-    expect(typeof bst.get_max).toEqual('function');
+    expect(typeof bst.getMax).toEqual('function');
   });
 
   test('returns the smallest value in the tree', () => {
@@ -131,6 +129,6 @@ describe('get_max', () => {
     bst.add(1);
     bst.add(-3);
     bst.add(-1);
-    expect(bst.get_max()).toEqual(3);
+    expect(bst.getMax()).toEqual(3);
   });
 });

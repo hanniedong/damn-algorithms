@@ -5,56 +5,56 @@ The Queue class should have the following methods:
 enqueue - adds a value to the back of the queue
 dequeue - removes the value from the front of the queue
 peek - tells us what value was first added to the queue
-get_size - tells us how many values are currently in the queue
+getSize - tells us how many values are currently in the queue
 reset - removes all values from the queue
 
 Examples:
 
 queue.enqueue('good');
 queue.enqueue('kid');
-queue._storage = { 0: 'good', 1: 'kid' }
+queue.storage = { 0: 'good', 1: 'kid' }
 queue.enqueue('maad');
 queue.enqueue('city');
-queue._storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city' }
+queue.storage = { 0: 'good', 1: 'kid', 2: 'maad', 3: 'city' }
 queue.peek() => return 'good'
 queue.dequeue() => return 'good'
-queue._storage = { 1: 'kid', 2: 'maad', 3: 'city' }
-queue.get_size => return 3
+queue.storage = { 1: 'kid', 2: 'maad', 3: 'city' }
+queue.getSize => return 3
 queue.reset()
-queue._storage = {}
+queue.storage = {}
  */
 
 class Queue {
   constructor() {
-    this._storage = {};
-    this._front = 0;
-    this._back = 0;
+    this.storage = {};
+    this.front = 0;
+    this.back = 0;
   }
 
   enqueue(value) {
-    this._storage[this._back] = value;
-    this._back++;
+    this.storage[this.back] = value;
+    this.back += 1;
   }
 
   dequeue() {
-    let value = this._storage[this._front];
-    delete this._storage[this._front];
-    this._front++;
+    const value = this.storage[this.front];
+    delete this.storage[this.front];
+    this.front += 1;
     return value;
   }
 
   peek() {
-    return this._storage[this._front];
+    return this.storage[this.front];
   }
 
-  get_size() {
-    return this._back - this._front;
+  getSize() {
+    return this.back - this.front;
   }
 
   reset() {
-    this._storage = {};
-    this._front = 0;
-    this._back = 0;
+    this.storage = {};
+    this.front = 0;
+    this.back = 0;
   }
 }
 

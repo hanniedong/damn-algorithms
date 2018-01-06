@@ -9,58 +9,58 @@ describe('ES6 Class', () => {
 });
 
 describe('Graph constructor', () => {
-  test('has a _vertices property that is initialized to an empty array', () => {
+  test('has a vertices property that is initialized to an empty array', () => {
     const graph = new Graph();
-    expect(graph._vertices).toEqual([]);
+    expect(graph.vertices).toEqual([]);
   });
 
-  test('has a _adj_list property that is initialized to an empty object', () => {
+  test('has a adjList property that is initialized to an empty object', () => {
     const graph = new Graph();
-    expect(graph._adj_list).toEqual({});
-  });
-});
-
-describe('add_vertex', () => {
-  test('is a method', () => {
-    const graph = new Graph();
-    expect(typeof graph.add_vertex).toEqual('function');
-  });
-
-  test('pushes a vertex to end of the _vertices list', () => {
-    const graph = new Graph();
-    graph.add_vertex('good');
-    graph.add_vertex('kid');
-    graph.add_vertex('maad');
-    graph.add_vertex('city');
-    expect(graph._vertices).toEqual(['good', 'kid', 'maad', 'city']);
-  });
-
-  test('assigns a key to the _adj_list which has a value of an empty array', () => {
-    const graph = new Graph();
-    graph.add_vertex('good');
-    graph.add_vertex('kid');
-    graph.add_vertex('maad');
-    graph.add_vertex('city');
-    expect(graph._adj_list['good']).toEqual([]);
-    expect(graph._adj_list['kid']).toEqual([]);
-    expect(graph._adj_list['maad']).toEqual([]);
-    expect(graph._adj_list['city']).toEqual([]);
+    expect(graph.adjList).toEqual({});
   });
 });
 
-describe('add_edge', () => {
+describe('addVertex', () => {
   test('is a method', () => {
     const graph = new Graph();
-    expect(typeof graph.add_edge).toEqual('function');
+    expect(typeof graph.addVertex).toEqual('function');
+  });
+
+  test('pushes a vertex to end of the vertices list', () => {
+    const graph = new Graph();
+    graph.addVertex('good');
+    graph.addVertex('kid');
+    graph.addVertex('maad');
+    graph.addVertex('city');
+    expect(graph.vertices).toEqual(['good', 'kid', 'maad', 'city']);
+  });
+
+  test('assigns a key to the adjList which has a value of an empty array', () => {
+    const graph = new Graph();
+    graph.addVertex('good');
+    graph.addVertex('kid');
+    graph.addVertex('maad');
+    graph.addVertex('city');
+    expect(graph.adjList['good']).toEqual([]);
+    expect(graph.adjList['kid']).toEqual([]);
+    expect(graph.adjList['maad']).toEqual([]);
+    expect(graph.adjList['city']).toEqual([]);
+  });
+});
+
+describe('addEdge', () => {
+  test('is a method', () => {
+    const graph = new Graph();
+    expect(typeof graph.addEdge).toEqual('function');
   });
 
   test('creates an edge from a given source to a given destination and vice versa', () => {
-    const money_trees = new Graph();
-    money_trees.add_vertex('Kendrick Lamar');
-    money_trees.add_vertex('Jay Rock');
-    money_trees.add_edge('Kendrick Lamar', 'Jay Rock');
-    expect(money_trees._adj_list['Kendrick Lamar']).toEqual(['Jay Rock']);
-    expect(money_trees._adj_list['Jay Rock']).toEqual(['Kendrick Lamar']);
+    const moneyTrees = new Graph();
+    moneyTrees.addVertex('Kendrick Lamar');
+    moneyTrees.addVertex('Jay Rock');
+    moneyTrees.addEdge('Kendrick Lamar', 'Jay Rock');
+    expect(moneyTrees.adjList['Kendrick Lamar']).toEqual(['Jay Rock']);
+    expect(moneyTrees.adjList['Jay Rock']).toEqual(['Kendrick Lamar']);
   });
 });
 
@@ -71,12 +71,12 @@ describe('contains', () => {
   });
 
   test("returns a boolean based on a given vertex's presence in the graph", () => {
-    const money_trees = new Graph();
-    money_trees.add_vertex('Kendrick Lamar');
-    money_trees.add_vertex('Jay Rock');
-    expect(money_trees._vertices).toContain('Kendrick Lamar');
-    expect(money_trees._vertices).toContain('Jay Rock');
-    expect(money_trees._vertices).not.toContain('Schoolboy Q');
+    const moneyTrees = new Graph();
+    moneyTrees.addVertex('Kendrick Lamar');
+    moneyTrees.addVertex('Jay Rock');
+    expect(moneyTrees.vertices).toContain('Kendrick Lamar');
+    expect(moneyTrees.vertices).toContain('Jay Rock');
+    expect(moneyTrees.vertices).not.toContain('Schoolboy Q');
   });
 });
 
@@ -87,21 +87,21 @@ describe('breadth_first_search', () => {
   });
 });
 
-describe('to_string', () => {
+describe('toString', () => {
   test('is a method', () => {
     const graph = new Graph();
-    expect(typeof graph.to_string).toEqual('function');
+    expect(typeof graph.toString).toEqual('function');
   });
 
   test('returns a string with the proper data on vertices and edges', () => {
-    const money_trees = new Graph();
-    money_trees.add_vertex('Kendrick Lamar');
-    money_trees.add_vertex('Jay Rock');
-    money_trees.add_edge('Kendrick Lamar', 'Jay Rock');
-    console.log(money_trees.to_string());
-    expect(typeof money_trees.to_string()).toEqual('string');
-    expect(money_trees.to_string().indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
-    expect(money_trees.to_string().indexOf('Jay Rock')).toBeGreaterThanOrEqual(0);
-    expect(money_trees.to_string().indexOf('Schoolboy Q')).toBe(-1);
+    const moneyTrees = new Graph();
+    moneyTrees.addVertex('Kendrick Lamar');
+    moneyTrees.addVertex('Jay Rock');
+    moneyTrees.addEdge('Kendrick Lamar', 'Jay Rock');
+    console.log(moneyTrees.toString());
+    expect(typeof moneyTrees.toString()).toEqual('string');
+    expect(moneyTrees.toString().indexOf('Kendrick Lamar')).toBeGreaterThanOrEqual(0);
+    expect(moneyTrees.toString().indexOf('Jay Rock')).toBeGreaterThanOrEqual(0);
+    expect(moneyTrees.toString().indexOf('Schoolboy Q')).toBe(-1);
   });
 });
