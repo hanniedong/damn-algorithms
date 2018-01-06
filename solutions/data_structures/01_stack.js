@@ -36,9 +36,10 @@ class Stack {
   }
 
   pop() {
-    let result = this._storage[--this._size];
-    delete this._storage[this._size];
-    return result;
+    let value = this._storage[this._size - 1];
+    delete this._storage[this._size - 1];
+    this._size--;
+    return value;
   }
 
   peek() {
