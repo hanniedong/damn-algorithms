@@ -2,7 +2,7 @@
 Given an object of track names and durations, write a function that returns the track name with the longest duration. Consider how you can convert the given durations into a format that will calculate correct comparisons.
 
 Example:
-const good_kid_maad_city = {
+const goodKidMaadCity = {
   "Sherane a.k.a. Master Splinter's Daughter": "4:34",
   "*****, Don't Kill My Vibe": "5:11",
   "Backseat Freestyle": "3:33",
@@ -17,7 +17,7 @@ const good_kid_maad_city = {
   "Compton": "4:08"
 };
 
-find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of Thirst"
+findLongestTrack(goodKidMaadCity); => return "Sing About Me, I'm Dying of Thirst"
 */
 
 /**
@@ -25,25 +25,26 @@ find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of T
  * @return {string}
  */
 
-const find_longest_track = album => {
-  let curr_longest_duration = Number.MIN_SAFE_INTEGER;
-  let curr_longest_track;
+const convertTimeToSeconds = timeString => (
+  timeString.split(':')
+    .reduce((min, sec) =>
+      (Number(min) * 60) + Number(sec))
+);
 
-  for (let track in album) {
-    let curr_track_duration = convert_time_to_seconds(album[track]);
+const findLongestTrack = (album) => {
+  let currLongestDuration = Number.MIN_SAFE_INTEGER;
+  let currLongestTrack;
 
-    if (curr_track_duration > curr_longest_duration) {
-      curr_longest_duration = curr_track_duration;
-      curr_longest_track = track;
+  Object.entries(album).forEach((track) => {
+    const [trackName, duration] = track;
+    const currTrackDuration = convertTimeToSeconds(duration);
+
+    if (currTrackDuration > currLongestDuration) {
+      currLongestDuration = currTrackDuration;
+      currLongestTrack = trackName;
     }
-  }
-  return curr_longest_track;
-};
-
-const convert_time_to_seconds = string => {
-  return string.split(':').reduce((min, sec) => {
-    return parseInt(min) * 60 + parseInt(sec);
   });
+  return currLongestTrack;
 };
 
-export default find_longest_track;
+export default findLongestTrack;

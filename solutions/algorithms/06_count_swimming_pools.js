@@ -24,28 +24,6 @@ return 4
  * @return {number}
  */
 
-const count_swimming_pools = matrix => {
-  if (!Array.isArray(matrix) || !matrix.length) {
-    return 0;
-  }
-
-  let result = 0;
-
-  let row = matrix.length;
-  let col = matrix[0].length;
-
-  for (let i = 0; i < row; i++) {
-    for (let j = 0; j < col; j++) {
-      if (matrix[i][j] === 0) {
-        result++;
-        dfs(matrix, row, col, i, j);
-      }
-    }
-  }
-
-  return result;
-};
-
 const dfs = (matrix, row, col, i, j) => {
   if (i >= row || j >= col || i < 0 || j < 0 || matrix[i][j] === 1) {
     return;
@@ -59,4 +37,26 @@ const dfs = (matrix, row, col, i, j) => {
   dfs(matrix, row, col, i, j - 1);
 };
 
-export default count_swimming_pools;
+const countSwimmingPools = (matrix) => {
+  if (!Array.isArray(matrix) || !matrix.length) {
+    return 0;
+  }
+
+  let result = 0;
+
+  const row = matrix.length;
+  const col = matrix[0].length;
+
+  for (let i = 0; i < row; i++) {
+    for (let j = 0; j < col; j++) {
+      if (matrix[i][j] === 0) {
+        result += 1;
+        dfs(matrix, row, col, i, j);
+      }
+    }
+  }
+
+  return result;
+};
+
+export default countSwimmingPools;

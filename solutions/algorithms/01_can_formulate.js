@@ -6,12 +6,13 @@ You can assume that both inputs will be strings. Each letter in the lyrics strin
 Examples:
 
 let target = 'JavaScript'
-let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
-can_formulate(target, good_kid_chorus); => return false
+let goodKidChorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
+
+canFormulate(target, goodKidChorus); => return false
 
 let target = 'Kendrick Lamar';
-let now_or_never_verse = 'Waking up in a dream Sleepwalking on another big stage You never heard peace til you hear people scream Your name in unison';
-can_formulate(target, now_or_never_verse); => return true
+let nowOrNeverVerse = 'Waking up in a dream Sleepwalking on another big stage You never heard peace til you hear people scream Your name in unison';
+canFormulate(target, nowOrNeverVerse); => return true
 */
 
 /**
@@ -20,23 +21,20 @@ can_formulate(target, now_or_never_verse); => return true
  * @return {boolean}
  */
 
-const can_formulate = (target, lyrics) => {
+const canFormulate = (target, lyrics) => {
   if (target.length > lyrics.length) {
     return false;
   }
 
-  let target_lowercase = target.toLowerCase();
-  let lyrics_lowercase = lyrics.toLowerCase();
+  const possibleChars = {};
 
-  let possible_chars = {};
-
-  for (let char of lyrics_lowercase) {
-    possible_chars[char] = (possible_chars[char] || 0) + 1;
+  for (const char of lyrics.toLowerCase()) {
+    possibleChars[char] = (possibleChars[char] || 0) + 1;
   }
 
-  for (let char of target_lowercase) {
-    possible_chars[char] = (possible_chars[char] || 0) - 1;
-    if (possible_chars[char] === -1) {
+  for (const char of target.toLowerCase()) {
+    possibleChars[char] = (possibleChars[char] || 0) - 1;
+    if (possibleChars[char] === -1) {
       return false;
     }
   }
@@ -44,4 +42,4 @@ const can_formulate = (target, lyrics) => {
   return true;
 };
 
-export default can_formulate;
+export default canFormulate;

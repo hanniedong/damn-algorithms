@@ -24,6 +24,6 @@ return 4
  * @return {number}
  */
 
-const count_swimming_pools = matrix => {};
+const countSwimmingPools = (matrix) => {};
 
-export default count_swimming_pools;
+export default countSwimmingPools;

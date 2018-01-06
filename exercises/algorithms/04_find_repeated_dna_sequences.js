@@ -7,24 +7,24 @@ Given a positive integer of n and a DNA sequence string, write a function that r
 
 Example:
 let sequence = 'WARPEACE';
-find_repeated_dna_sequences(sequence, 3) => return []
+findRepeatedDnaSequences(sequence, 3) => return []
 
 let sequence = 'WARPEACEWAR';
-find_repeated_dna_sequences(sequence, 2) => return ['WA', 'AR']
-find_repeated_dna_sequences(sequence, 3) => return ['WAR']
-find_repeated_dna_sequences(sequence, 4) => return []
+findRepeatedDnaSequences(sequence, 2) => return ['WA', 'AR']
+findRepeatedDnaSequences(sequence, 3) => return ['WAR']
+findRepeatedDnaSequences(sequence, 4) => return []
 
 let sequence = 'PAINJOYPAIN';
-find_repeated_dna_sequences(sequence, 4) => return ['PAIN']
+findRepeatedDnaSequences(sequence, 4) => return ['PAIN']
 
 let sequence = 'WARPEACEPEACE';
-find_repeated_dna_sequences(sequence, 5) => return ['PEACE']
+findRepeatedDnaSequences(sequence, 5) => return ['PEACE']
 
 let sequence = 'POISONPAINPOISONJOY';
-find_repeated_dna_sequences(sequence, 6) => return ['POISON']
+findRepeatedDnaSequences(sequence, 6) => return ['POISON']
 
 let sequence = 'LOYALTYWARROYALTYPEACELOYALTYJOYROYALTY';
-find_repeated_dna_sequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
+findRepeatedDnaSequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
 */
 
 /**
@@ -33,6 +33,6 @@ find_repeated_dna_sequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
  * @return {array}
  */
 
-const find_repeated_dna_sequences = (sequence, n) => {};
+const findRepeatedDnaSequences = (sequence, n) => {};
 
-export default find_repeated_dna_sequences;
+export default findRepeatedDnaSequences;

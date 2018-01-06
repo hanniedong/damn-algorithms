@@ -1,19 +1,19 @@
-import find_longest_track from '../../exercises/algorithms/03_find_longest_track';
+import findLongestTrack from '../../exercises/algorithms/03_find_longest_track';
 
-describe('find_longest_track', () => {
+describe('findLongestTrack', () => {
   test('is a function', () => {
-    expect(typeof find_longest_track).toEqual('function');
+    expect(typeof findLongestTrack).toEqual('function');
   });
 
   test('returns a string containing the name of the longest track', () => {
     const album = {
-      'track 1': '2:34',
-      'track 2': '3:45',
-      'track 3': '1:23'
+      'track_1': '2:34',
+      'track_2': '3:45',
+      'track_3': '1:23'
     };
-    let result = find_longest_track(album);
+    let result = findLongestTrack(album);
     expect(typeof result).toEqual('string');
-    expect(result).toEqual('track 2');
+    expect(result).toEqual('track_2');
   });
 
   test('good_kid_maad_city returns "Sing About Me, I\'m Dying of Thirst"', () => {
@@ -31,7 +31,7 @@ describe('find_longest_track', () => {
       Real: '7:23',
       Compton: '4:08'
     };
-    const result = find_longest_track(good_kid_maad_city);
+    const result = findLongestTrack(good_kid_maad_city);
     expect(result).toEqual("Sing About Me, I'm Dying of Thirst");
   });
 
@@ -46,7 +46,7 @@ describe('find_longest_track', () => {
       'untitled 07': '8:16',
       'untitled 08': '3:56'
     };
-    const result = find_longest_track(untitled_unmastered);
+    const result = findLongestTrack(untitled_unmastered);
     expect(result).toEqual('untitled 07');
   });
 
@@ -67,7 +67,7 @@ describe('find_longest_track', () => {
       GOD: '4:09',
       DUCKWORTH: '4:09'
     };
-    const result = find_longest_track(damn);
+    const result = findLongestTrack(damn);
     expect(result).toEqual('FEAR');
   });
 });

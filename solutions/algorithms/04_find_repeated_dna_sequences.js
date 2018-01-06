@@ -7,24 +7,24 @@ Given a positive integer of n and a DNA sequence string, write a function that r
 
 Example:
 let sequence = 'WARPEACE';
-find_repeated_dna_sequences(sequence, 3) => return []
+findRepeatedDnaSequences(sequence, 3) => return []
 
 let sequence = 'WARPEACEWAR';
-find_repeated_dna_sequences(sequence, 2) => return ['WA', 'AR']
-find_repeated_dna_sequences(sequence, 3) => return ['WAR']
-find_repeated_dna_sequences(sequence, 4) => return []
+findRepeatedDnaSequences(sequence, 2) => return ['WA', 'AR']
+findRepeatedDnaSequences(sequence, 3) => return ['WAR']
+findRepeatedDnaSequences(sequence, 4) => return []
 
 let sequence = 'PAINJOYPAIN';
-find_repeated_dna_sequences(sequence, 4) => return ['PAIN']
+findRepeatedDnaSequences(sequence, 4) => return ['PAIN']
 
 let sequence = 'WARPEACEPEACE';
-find_repeated_dna_sequences(sequence, 5) => return ['PEACE']
+findRepeatedDnaSequences(sequence, 5) => return ['PEACE']
 
 let sequence = 'POISONPAINPOISONJOY';
-find_repeated_dna_sequences(sequence, 6) => return ['POISON']
+findRepeatedDnaSequences(sequence, 6) => return ['POISON']
 
 let sequence = 'LOYALTYWARROYALTYPEACELOYALTYJOYROYALTY';
-find_repeated_dna_sequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
+findRepeatedDnaSequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
 */
 
 /**
@@ -33,16 +33,21 @@ find_repeated_dna_sequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
  * @return {array}
  */
 
-const find_repeated_dna_sequences = (sequence, n) => {
-  let dna = new Set();
-  let result = new Set();
+const findRepeatedDnaSequences = (sequence, n) => {
+  const dna = new Set();
+  const result = new Set();
 
   for (let i = 0; i < sequence.length - (n - 1); i++) {
-    let curr_seq = sequence.substr(i, n);
-    dna.has(curr_seq) ? result.add(curr_seq) : dna.add(curr_seq);
+    const currSeq = sequence.substr(i, n);
+
+    if (dna.has(currSeq)) {
+      result.add(currSeq);
+    } else {
+      dna.add(currSeq);
+    }
   }
 
   return Array.from(result);
 };
 
-export default find_repeated_dna_sequences;
+export default findRepeatedDnaSequences;

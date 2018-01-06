@@ -2,7 +2,7 @@
 Given an object of track names and durations, write a function that returns the track name with the longest duration. Consider how you can convert the given durations into a format that will calculate correct comparisons.
 
 Example:
-const good_kid_maad_city = {
+const goodKidMaadCity = {
   "Sherane a.k.a. Master Splinter's Daughter": "4:34",
   "*****, Don't Kill My Vibe": "5:11",
   "Backseat Freestyle": "3:33",
@@ -17,7 +17,7 @@ const good_kid_maad_city = {
   "Compton": "4:08"
 };
 
-find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of Thirst"
+findLongestTrack(goodKidMaadCity); => return "Sing About Me, I'm Dying of Thirst"
 */
 
 /**
@@ -25,6 +25,6 @@ find_longest_track(good_kid_maad_city); => return "Sing About Me, I'm Dying of T
  * @return {string}
  */
 
-const find_longest_track = album => {};
+const findLongestTrack = (album) => {};
 
-export default find_longest_track;
+export default findLongestTrack;

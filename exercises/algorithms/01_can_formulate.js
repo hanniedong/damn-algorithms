@@ -6,12 +6,13 @@ You can assume that both inputs will be strings. Each letter in the lyrics strin
 Examples:
 
 let target = 'JavaScript'
-let good_kid_chorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
-can_formulate(target, good_kid_chorus); => return false
+let goodKidChorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
+
+canFormulate(target, goodKidChorus); => return false
 
 let target = 'Kendrick Lamar';
-let now_or_never_verse = 'Waking up in a dream Sleepwalking on another big stage You never heard peace til you hear people scream Your name in unison';
-can_formulate(target, now_or_never_verse); => return true
+let nowOrNeverVerse = 'Waking up in a dream Sleepwalking on another big stage You never heard peace til you hear people scream Your name in unison';
+canFormulate(target, nowOrNeverVerse); => return true
 */
 
 /**
@@ -20,6 +21,6 @@ can_formulate(target, now_or_never_verse); => return true
  * @return {boolean}
  */
 
-const can_formulate = (target, lyrics) => {};
+const canFormulate = (target, lyrics) => {};
 
-export default can_formulate;
+export default canFormulate;
