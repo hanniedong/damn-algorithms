@@ -1,5 +1,5 @@
 /*
-  Given a string, write an algorithm that returns a boolean based on whether or not any permutation can form a palindrome. You can expect a string of only letters, but make sure to properly handle case sensitivity.
+Given a string, write an algorithm that returns a boolean based on whether or not any permutation can form a palindrome. The input string will contain lowercase letters only.
 
   Example:
   'HUMBLE' => return false
