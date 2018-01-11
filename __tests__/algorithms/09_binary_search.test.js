@@ -1,4 +1,4 @@
-import binarySearch from '../../exercises/algorithms/05_binary_search';
+import binarySearch from '../../exercises/algorithms/09_binary_search';
 
 describe('binarySearch', () => {
   test('is a function', () => {

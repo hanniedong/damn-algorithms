@@ -1,4 +1,4 @@
-import findRepeatedDnaSequences from '../../exercises/algorithms/04_find_repeated_dna_sequences';
+import findRepeatedDnaSequences from '../../exercises/algorithms/08_find_repeated_dna_sequences';
 
 describe('findRepeatedDnaSequences', () => {
   test('is a function', () => {

@@ -1,4 +1,4 @@
-import countSwimmingPools from '../../exercises/algorithms/06_count_swimming_pools';
+import countSwimmingPools from '../../exercises/algorithms/10_count_swimming_pools';
 
 describe('countSwimmingPools', () => {
   test('is a function', () => {
