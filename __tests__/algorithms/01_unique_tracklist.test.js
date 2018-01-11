@@ -11,12 +11,6 @@ describe('isUniqueTracklist', () => {
     expect(result).toBeTruthy();
   });
 
-  test('properly accounts for case sensitivity', () => {
-    const section80 = ['HIIIPOWER', 'hiiipower'];
-    const result = isUniqueTracklist(section80);
-    expect(result).toBeFalsy();
-  });
-
   test('returns true if tracks are all unique', () => {
     const section80 = ['A.D.H.D.', 'Chapter Six', 'Chapter Ten', 'Rigamortus', 'HiiiPower'];
     const a = isUniqueTracklist(section80);

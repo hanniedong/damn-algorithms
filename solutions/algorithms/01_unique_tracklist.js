@@ -18,10 +18,10 @@ const isUniqueTracklist = (tracks) => {
   const set = new Set();
 
   for (const track of tracks) {
-    if (set.has(track.toLowerCase())) {
+    if (set.has(track)) {
       return false;
     }
-    set.add(track.toLowerCase());
+    set.add(track);
   }
   return true;
 };
