@@ -1,34 +1,28 @@
 /*
-Given an arbitrary target string and another string of lyrics, write a function that returns a boolean of whether or not the target string can be formulated from the lyrics.
+Given an arbitrary target string and array of album strings, write an algorithm that returns a boolean of whether or not the target string can be formulated from the characters in the array.
 
-You can assume that both inputs will be strings. Each letter in the lyrics string can only be used once in your target string. The algorithm should also be case insensitive.
+Each character in the album list can only be used once in the target string. The algorithm should also be case insensitive.
 
-Examples:
+Example:
+const target = 'JavaScript'
+const gkmc = ['DAMN', 'To Pimp A Butterfly', 'good kid, mAAd city', 'Section 80'];
+canFormulate(target, gkmc); => return false
 
-let target = 'JavaScript'
-let goodKidChorus = 'Mass hallucination baby Ill education baby Want to reconnect with your elations This is your station baby';
-
-canFormulate(target, goodKidChorus); => return false
-
-let target = 'Kendrick Lamar';
-let nowOrNeverVerse = 'Waking up in a dream Sleepwalking on another big stage You never heard peace til you hear people scream Your name in unison';
-canFormulate(target, nowOrNeverVerse); => return true
+const target = 'data';
+const gkmc = ['DAMN', 'To Pimp A Butterfly', 'good kid, mAAd city', 'Section 80'];
+canFormulate(target, gkmc); => return true
 */
 
 /**
  * @param {string} target
- * @param {string} lyrics
+ * @param {array} albums
  * @return {boolean}
  */
 
-const canFormulate = (target, lyrics) => {
-  if (target.length > lyrics.length) {
-    return false;
-  }
-
+const canFormulate = (target, albums) => {
   const possibleChars = {};
 
-  for (const char of lyrics.toLowerCase()) {
+  for (const char of albums.join('').toLowerCase()) {
     possibleChars[char] = (possibleChars[char] || 0) + 1;
   }
 
