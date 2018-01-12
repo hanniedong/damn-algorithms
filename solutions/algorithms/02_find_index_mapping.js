@@ -20,6 +20,6 @@ b = ['Money Trees', 'Real', 'Compton', 'good kid', 'Poetic Justice'];
  * @return {array}
  */
 
-const findIndexMapping = (a, b) => a.map(num => b.indexOf(num));
+const findIndexMapping = (a, b) => a.map(track => b.indexOf(track));
 
 export default findIndexMapping;
