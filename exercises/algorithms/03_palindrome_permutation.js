@@ -14,8 +14,8 @@ Given a string, write an algorithm that returns a boolean based on whether or no
 */
 
 /**
- * @param  {string}  str [description]
- * @return {Boolean}     [description]
+ * @param  {string}  str
+ * @return {Boolean}
  */
 
 const isPalindromePermutation = (str) => {};
