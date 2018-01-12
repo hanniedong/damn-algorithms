@@ -25,3 +25,7 @@ individually:
 collectively:
 
 `yarn test`
+
+## solutions:
+
+`git checkout solutions`
