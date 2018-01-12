@@ -1,4 +1,4 @@
-import { Node, BinarySearchTree } from '../../exercises/data_structures/05_binary_search_tree';
+import { Node, BinarySearchTree } from '../../exercises/data_structures/06_binary_search_tree';
 
 describe('ES6 Classes', () => {
   test('has a Node class', () => {

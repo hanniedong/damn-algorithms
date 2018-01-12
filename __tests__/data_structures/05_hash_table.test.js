@@ -1,4 +1,4 @@
-import HashTable from '../../exercises/data_structures/04_hash_table';
+import HashTable from '../../exercises/data_structures/05_hash_table';
 
 describe('ES6 Class', () => {
   test('has a HashTable class', () => {

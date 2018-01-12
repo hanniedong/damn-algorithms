@@ -1,4 +1,4 @@
-import Graph from '../../exercises/data_structures/06_graph';
+import Graph from '../../exercises/data_structures/07_graph';
 
 describe('ES6 Class', () => {
   test('has a Graph class', () => {

@@ -1,4 +1,4 @@
-import { Node, LinkedList } from '../../exercises/data_structures/03_singly_linked_list';
+import { Node, LinkedList } from '../../exercises/data_structures/04_singly_linked_list';
 
 describe('ES6 Classes', () => {
   test('has a Node class', () => {
