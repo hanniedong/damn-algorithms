@@ -29,7 +29,7 @@ const isPalindromePermutation = (str) => {
     }
   });
 
-  return Array.from(set).length < 2;
+  return set.size <= 1;
 };
 
 export default isPalindromePermutation;
