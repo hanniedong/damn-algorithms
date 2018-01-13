@@ -1,6 +1,6 @@
-# good-algorithms-maad-data-structures
+# DAMN algorithms
 
-An algorithms and data structures course in ES6 inspired by Kendrick Lamar's album 'good kid, m.A.A.d city'
+An algorithms and data structures course in ES6 inspired by Kendrick Lamar's album 'DAMN.'
 
 ## configuration
 
