@@ -26,6 +26,6 @@ collectively:
 
 `yarn test`
 
-## solutions:
+## solutions
 
 `git checkout solutions`
