@@ -7,7 +7,7 @@ Example:
   [0,1,0],
   [0,0,1]
 ]
-return 2
+=> return 2
 
 Example:
 [
@@ -16,7 +16,7 @@ Example:
   [1,1,1,0],
   [1,0,0,0]
 ]
-return 4
+=> return 4
  */
 
 /**

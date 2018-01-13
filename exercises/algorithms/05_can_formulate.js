@@ -8,15 +8,15 @@ const gkmc = {
   tracks: [
     {
       track_number: 1,
-      name: 'Sherane a.k.a Master Splinter\'s Daughter',
+      name: "Sherane a.k.a Master Splinter's Daughter",
     },
     {
       track_number: 2,
-      name: 'B****, Don\'t Kill My Vibe',
+      name: "B****, Don't Kill My Vibe",
     },
     {
       track_number: 3,
-      name: 'Backseat Freestyle',
+      name: "Backseat Freestyle",
     },
   ],
 };

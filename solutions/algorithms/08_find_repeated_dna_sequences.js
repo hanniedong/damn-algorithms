@@ -6,24 +6,24 @@ But according to Kendrick Lamar, his DNA is made of elements like 'LOYALTY', 'RO
 Given a positive integer of n and a DNA sequence string, write a function that returns an array of all the n-letter-long sequences that occur more than once in a given sequence.
 
 Example:
-let sequence = 'WARPEACE';
+const sequence = 'WARPEACE';
 findRepeatedDnaSequences(sequence, 3) => return []
 
-let sequence = 'WARPEACEWAR';
+const sequence = 'WARPEACEWAR';
 findRepeatedDnaSequences(sequence, 2) => return ['WA', 'AR']
 findRepeatedDnaSequences(sequence, 3) => return ['WAR']
 findRepeatedDnaSequences(sequence, 4) => return []
 
-let sequence = 'PAINJOYPAIN';
+const sequence = 'PAINJOYPAIN';
 findRepeatedDnaSequences(sequence, 4) => return ['PAIN']
 
-let sequence = 'WARPEACEPEACE';
+const sequence = 'WARPEACEPEACE';
 findRepeatedDnaSequences(sequence, 5) => return ['PEACE']
 
-let sequence = 'POISONPAINPOISONJOY';
+const sequence = 'POISONPAINPOISONJOY';
 findRepeatedDnaSequences(sequence, 6) => return ['POISON']
 
-let sequence = 'LOYALTYWARROYALTYPEACELOYALTYJOYROYALTY';
+const sequence = 'LOYALTYWARROYALTYPEACELOYALTYJOYROYALTY';
 findRepeatedDnaSequences(sequence, 7) => return ["LOYALTY", "ROYALTY"]
 */
 
