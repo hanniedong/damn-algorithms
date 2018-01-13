@@ -28,7 +28,7 @@ can_formulate('*M*U*S*I*C*') => return false
 
 /**
  * @param {string} target
- * @param {array} albums
+ * @param {object} albums
  * @return {boolean}
  */
 
