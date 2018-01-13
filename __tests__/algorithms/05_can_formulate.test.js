@@ -7,39 +7,40 @@ describe('canFormulate', () => {
   });
 
   test('returns the correct boolean if a string can be formulated', () => {
-    const a = canFormulate('a', ['a', 'b']);
+    const album = { tracks: [ {name: 'a'}, {name: 'b'}]}
+    const a = canFormulate('a', album);
     expect(a).toEqual(true);
-    const b = canFormulate('ab', ['a']);
+    const b = canFormulate('abc', album);
     expect(b).toEqual(false);
   });
 
-  test('"aloha" can be formulated from ["MAHALO"]', () => {
-    const result = canFormulate('aloha', ['MAHALO']);
+  test('"aloha" can be formulated from track name "MAHALO"', () => {
+    const album = { tracks: [ {name: 'MAHALO'}]};
+    const result = canFormulate('aloha', album);
     expect(result).toBeTruthy();
   });
 
-  test('"OaKlAnD, ca" can be formulated from ["oAkLaNd", " CA "]', () => {
-    const result = canFormulate('OaKlAnD ca', ['oAkLaNd', ' CA ']);
+  test('"OaKlAnD, ca" can be formulated from track names "oAkLaNd" and " CA "]', () => {
+    const album = { tracks: [ {name: 'oAkLaNd'}, {name: ' CA '}]};
+    const result = canFormulate('OaKlAnD ca', album);
     expect(result).toBeTruthy();
   });
 
-  test('"telegraph" can be formulated from [" T"," E"," L"," E"," G"," R"," A"," P"," H,"]', () => {
-    const result = canFormulate('telegraph', [' T',' E',' L',' E',' G',' R',' A',' P',' H,']);
+  test('"OCCUPIES" can be formulated from track names "Poetic" and "Justice"', () => {
+    const album = { tracks: [ {name: 'Poetic'}, {name: 'Justice'}]};
+    const result = canFormulate('OCCUPIES', album);
     expect(result).toBeTruthy();
   });
 
-  test('"OCCUPIES" can be formulated from ["Poetic", "Justice"]', () => {
-    const result = canFormulate('OCCUPIES', ['Poetic', 'Justice']);
-    expect(result).toBeTruthy();
-  });
-
-  test('"Kendrick Lamar" cannot be formulated from ["KendrickLAMAR"]', () => {
-    const result = canFormulate('Kendrick Lamar', ['KendrickLAMAR']);
+  test('"Kendrick Lamar" cannot be formulated from track names "Kendrick" and "LAMAR"', () => {
+    const album = { tracks: [ {name: 'Kendrick'}, {name: 'LAMAR'}]}
+    const result = canFormulate('Kendrick Lamar', album);
     expect(result).toBeFalsy();
   });
 
-  test('"ALGORITHMS DATA STRUCTURES" cannot be formulated from ["algorithm", "data", "structures"]', () => {
-    const result = canFormulate('ALGORITHMS DATA STRUCTURES', ["algorithm", "data", "structure"]);
+  test('"ALGORITHMS DATA STRUCTURES" cannot be formulated from tracks "algorithm", "data", and "structure"', () => {
+    const album = { tracks: [ {name: 'algorithm'}, {name: 'data'}, {name: 'structure'}] };
+    const result = canFormulate('ALGORITHMS DATA STRUCTURES', album);
     expect(result).toBeFalsy();
   });
 });
