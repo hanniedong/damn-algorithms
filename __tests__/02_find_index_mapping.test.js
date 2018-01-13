@@ -1,4 +1,4 @@
-import findIndexMapping from '../../exercises/algorithms/02_find_index_mapping';
+import findIndexMapping from '../exercises/02_find_index_mapping';
 
 describe('findIndexMapping', () => {
   test('is a function', () => {

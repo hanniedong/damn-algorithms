@@ -1,4 +1,4 @@
-import isPalindromePermutation from '../../exercises/algorithms/03_palindrome_permutation';
+import isPalindromePermutation from '../exercises/03_palindrome_permutation';
 
 describe('isPalindromePermutation', () => {
   test('is a function', () => {

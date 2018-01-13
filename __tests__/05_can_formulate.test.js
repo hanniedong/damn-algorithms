@@ -1,4 +1,4 @@
-import canFormulate from '../../exercises/algorithms/05_can_formulate';
+import canFormulate from '../exercises/05_can_formulate';
 
 describe('canFormulate', () => {
   test('is a function', () => {

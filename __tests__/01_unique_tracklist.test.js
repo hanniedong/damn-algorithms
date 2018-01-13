@@ -1,4 +1,4 @@
-import isUniqueTracklist from '../../exercises/algorithms/01_unique_tracklist';
+import isUniqueTracklist from '../exercises/01_unique_tracklist';
 
 describe('isUniqueTracklist', () => {
   test('is a function', () => {

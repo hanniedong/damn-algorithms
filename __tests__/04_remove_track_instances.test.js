@@ -1,4 +1,4 @@
-import removeTrackInstances from '../../exercises/algorithms/04_remove_track_instances';
+import removeTrackInstances from '../exercises/04_remove_track_instances';
 
 describe('removeTrackInstances', () => {
   test('is a function', () => {
