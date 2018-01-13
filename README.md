@@ -1,6 +1,6 @@
 # DAMN algorithms
 
-An algorithms and data structures course in ES6 inspired by Kendrick Lamar's album 'DAMN.'
+An algorithms course in ES6 inspired by Kendrick Lamar's album 'DAMN.'
 
 ## configuration
 
