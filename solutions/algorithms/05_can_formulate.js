@@ -37,17 +37,17 @@ const toString = album => (
 );
 
 const canFormulate = (target, album) => {
-  const possibleChars = {};
+  const map = new Map();
 
   const tracks = toString(album);
 
-  for (const track of tracks) {
-    possibleChars[track] = (possibleChars[track] || 0) + 1;
+  for (const char of tracks) {
+    map.set(char, (map.get(char) || 0) + 1);
   }
 
   for (const char of target.toLowerCase()) {
-    possibleChars[char] = (possibleChars[char] || 0) - 1;
-    if (possibleChars[char] === -1) {
+    map.set(char, (map.get(char) || 0) - 1);
+    if (map.get(char) === -1) {
       return false;
     }
   }
