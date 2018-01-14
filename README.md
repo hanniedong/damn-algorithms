@@ -12,10 +12,6 @@ install dev dependencies:
 
 `yarn`
 
-install jest globally:
-
-`yarn add -g jest`
-
 ## run tests
 
 individually:
