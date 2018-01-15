@@ -2,16 +2,16 @@
 Given a string, write an algorithm that returns a boolean based on whether or not any permutation can form a palindrome. The input string will contain lowercase letters only.
 
 Example:
-'HUMBLE' => return false
-'LOYALTY' => return false
-'XXX' => return true
+'humble' => return false
+'loyalty' => return false
+'xxx' => return true
 
-'forFree' => return true
-'forSale' => return false
+'forfree' => return true
+'forsale' => return false
 
-'Rihanna' => return false
-'Hanna' => return true
-'Anna' => return true
+'rihanna' => return false
+'hanna' => return true
+'anna' => return true
 */
 
 /**
