@@ -4,13 +4,11 @@ Given an array of tracks and a target track, remove all instances of that target
 Example:
 const damn = ['DNA', 'HUMBLE', 'LOVE', 'DNA', 'LOYALTY', 'DNA', 'DNA'];
 const target1 = 'DNA';
+removeTrackInstances(damn, target1) => return 3
 
 const tpab = ['Institutionalized', 'u', 'Alright', 'Momma', 'Mortal Man'];
 const target2 = 'u';
-
-removeInstances(damn, target1) => return 3
-removeInstances(tpab, target2) => return 4
-*/
+removeTrackInstances(tpab, target2) => return 4
 
 /**
  * @param {array} tracklist
