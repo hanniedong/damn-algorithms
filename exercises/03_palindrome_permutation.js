@@ -6,11 +6,11 @@ Example:
 'loyalty' => return false
 'xxx' => return true
 
-'forfree' => return true
+'forfree' => return true ('freoerf')
 'forsale' => return false
 
 'rihanna' => return false
-'hanna' => return true
+'hanna' => return true ('anhna')
 'anna' => return true
 */
 
