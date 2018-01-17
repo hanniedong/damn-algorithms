@@ -3,7 +3,7 @@ Standard DNA is made up of four types of nucleotides: Adenine (A), Thymine (T), 
 
 But according to Kendrick Lamar, his DNA is made of elements like 'LOYALTY', 'ROYALTY', 'WAR', 'PEACE', 'POWER', 'POISON', 'PAIN', and 'JOY'.
 
-Given a positive integer of n and a DNA sequence string, write a function that returns an array of all the n-letter-long sequences that occur more than once in a given sequence.
+Given a positive integer of n and a DNA sequence string, write a function that returns an array of all the n-letter-long substrings that occur more than once in a given sequence.
 
 Example:
 const sequence = 'WARPEACE';
